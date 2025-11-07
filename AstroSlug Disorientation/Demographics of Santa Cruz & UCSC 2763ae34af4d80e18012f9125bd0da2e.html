@@ -1,0 +1,723 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Demographics of Santa Cruz &amp; UCSC</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2763ae34-af4d-80e1-8012-f9125bd0da2e" class="page sans"><header><div class="page-header-icon undefined"><img class="icon notion-static-icon" src="https://www.notion.so/icons/groups_gray.svg"/></div><h1 class="page-title">Demographics of Santa Cruz &amp; UCSC</h1><p class="page-description"></p></header><div class="page-body"><h1 id="27c3ae34-af4d-80fb-a46a-fe70cc88c439" class="">Current Economic Overview</h1><div id="29a3ae34-af4d-8052-928f-d52590599cab" class="column-list"><div id="29a3ae34-af4d-80e2-981e-f618e085e21d" style="width:50%" class="column"><p id="27c3ae34-af4d-8087-b1fb-f9edfc040b76" class="">Moving into and living in the City of Santa Cruz may bring about some culture shock, primarily due to the people who reside within the city. While the Astronomy &amp; Astrophysics Department is quite diverse in the racial, ethnic, and socioeconomic graduate students and post-docs, the city is well-described as a college beach town with rich, white, and retired homeowners. [<a href="https://datausa.io/profile/geo/santa-cruz-county-ca?completionsUniversities=carnegie_0&amp;statusEducation=statusEducation1&amp;genderRaceOptions=raceOption">citation</a>]</p><p id="27c3ae34-af4d-8004-afba-df7766067fca" class="">In the year 2025, graduate students in the Astronomy &amp; Astrophysics Department earned a yearly salary of about $55,000 which puts workers above the US American median individual income above $42,000 [<a href="https://fred.stlouisfed.org/series/mepainusa672n">citation</a>]. While our take-home pay is substantial with respect to the nation, the associated costs with living in California, Santa Cruz County, and the city of Santa Cruz are also higher. In this section, we describe the recent economic overview of the County of Santa Cruz to describe our place here, including how undergraduate students may be supporting themselves while attending UCSC. Due to the lack of economic data on the City of Santa Cruz, we broadly focus on the trends for Santa Cruz County. The county broadly covers places as far North as Big Basin Redwoods State Park and down South as Watsonville, including Santa Cruz, Scotts Valley, and Capitola.</p><p id="27c3ae34-af4d-8075-8e28-c6fcfaa3653f" class="">We provide a brief overview of the findings from the Workforce Development Board of Santa Cruz County 2025 State of the Workforce report [<a href="https://workforcescc.com/wp-content/uploads/2025/08/2025-SOW-Report-4.6lb.pdf">citation</a>]. This report was prepared by a group of local organizations including businesses, local government, residents of Santa Cruz County, and educational communities [<a href="https://workforcescc.com/">citation</a>].</p><p id="27c3ae34-af4d-808d-bcc1-d13d3b53d40d" class="">The unemployment rate is the percent of people who are unemployed and actively seeking work. In Santa Cruz County, this rate was 6.3 percent, while the state and national unemployment rates were 5.5 percent and 4.1 percent, respectively.</p><p id="27c3ae34-af4d-803e-9d88-e67a71166f3d" class="">To compare between jobs, the report distinguishes between three “Tiers” of occupations:</p><ol type="1" id="27c3ae34-af4d-8049-af21-d4c6f24ffbc9" class="numbered-list" start="1"><li>Tier 1 are the highest-paying jobs which include managerial positions, professional positions, and skilled technology occupations. The average annual salary (hourly wage) is $124,700 ($59.95). These jobs make up about 20 percent of the total amount of jobs in Santa Cruz County.</li></ol><ol type="1" id="27c3ae34-af4d-80c7-bf29-ea18ecc79728" class="numbered-list" start="2"><li>Tier 2 are the middle-wage jobs including administrative positions, production positions, and manufacturing. The average annual salary (hourly wage) is $74,400 ($35.77). These jobs make up about 23 percent of the total amount of jobs in Santa Cruz County.</li></ol><ol type="1" id="27c3ae34-af4d-80b3-8607-da5d68a15785" class="numbered-list" start="3"><li>Tier 3 are the lowest-earning jobs filling the rest of the economy including food service, retail, and hotel staff. The average annual salary (hourly wage) is $48,700 ($23.41). These jobs make up about 57 percent of the total amount of jobs in Santa Cruz County.</li></ol><p id="27c3ae34-af4d-804e-9ebc-d526899ed7f7" class="">The annual salary of an Astronomy &amp; Astrophysics graduate student would fall between a Tier 2 and Tier 3 occupation.</p><p id="27c3ae34-af4d-8076-92ee-c866225fac31" class="">According to the MIT Living Wage Calculator [<a href="https://livingwage.mit.edu/counties/06087">citation</a>], one adult (without children) in Santa Cruz County needs to earn a $38.99 hourly wage or $81,090 annual income before taxes in order to earn a “Living Wage”.</p></div><div id="29a3ae34-af4d-8037-9b0a-e73bb3f64ebb" style="width:50%" class="column"><p id="27c3ae34-af4d-800e-be6c-fbd7ef7642ff" class="">The demographic distribution in North Santa Cruz County (which includes the City of Santa Cruz, Scotts Valley, and Capitola) and South Santa Cruz County (primarily Watsonville) can help show where jobs are distributed within the county. In North Santa Cruz County, the race between White / Non-White / Two or More Races is distributed as 74 percent / 15 percent / 11 percent. In contrast, South Santa Cruz County is distributed as 39 percent / 41 percent / 19 percent. Accordingly, 19 percent of North Santa Cruz County are Hispanic or Latino, compared to the 72 percent of South Santa Cruz County. The educational attainment is also divided between the two regions. The percent of workers who have an Associate’s degree or Bachelor’s degree (or higher) in North Santa Cruz County is 62 percent. In South Santa Cruz County, this is only 28 percent. Both regions have the same 21 percent educational attainment of some college experience with no degree. 28 percent of workers in South Santa Cruz County with less than a high school diploma, while this is only 5 percent in North Santa Cruz County. In effect, the report highlights a large economic discrepancy in jobs available between workers in South and North Santa Cruz County. Residents of South Santa Cruz County usually occupy more of the Tier 3 jobs, and need to travel up to an hour to a job in North Santa Cruz County.</p><p id="27c3ae34-af4d-80c3-be75-e46404dd1114" class="">The change over time and distribution of employees within distinct clusters of industry provides another lens to understand the workers of Santa Cruz County. The report describes industry clusters using the average annual age. In the “Highest-Earning” cluster, jobs have an average annual wage above $89,500. The Defense, Aerospace, and Transportation Manufacturing cluster saw a 46 percent employment increase from 2021 to 2,423 workers. Joby Aviation and Zero Motorcycles are two startups in the county spurring some economic growth for young workers. In the medium-wage cluster, we find an average annual salary between $75,300 and $65,700. There was a huge increase in the number of healthcare employment by 10.4 percent from 2021 to reach 17,392 workers, primarily driven by outpatient care centers. While healthcare is booming, there are some challenges. There is a shortage for local healthcare providers and available training programs for staff. There is no formal medical school in the county, with long waitlists for Cabrillo College’s nursing program. The agriculture and food cluster shrunk by 12.7 percent down from 2021 to 3,475 occupations. The education and knowledge creation cluster grew from 2021 by 12.4 percent to 14,900 jobs. The low-wage cluster describes jobs where the average annual wage is below $50,000. The Retail cluster shrunk by 4.4 percent down from 2021 to 11,161 jobs. In contrast, the Tourism, Hospitality, &amp; Recreation cluster grew by 21.9 percent during the same time up to 16,202 jobs. There are similar amounts of jobs in the tourism industry (average annual wage of $31,794) as in the healthcare industry (average annual wage of $75,299).</p><p id="27c3ae34-af4d-80cc-b505-d1a747631bc8" class="">Workers of Santa Cruz County are diverse. In the more economically distressed South Santa Cruz County, workers usually attain a lower education and have a long commute North in low-wage jobs. Throughout the entire county, there is a trend of growth in Defense, Aerospace, and Transportation Manufacturing, Healthcare, and Tourism, Hospitality, &amp; Recreation. UCSC students may try to get part-time jobs to make ends meet, with the top three most common tourism jobs as fast food workers, waiters, and cooks.</p></div></div><hr id="2823ae34-af4d-805a-aa51-d0e24ed2dccd"/><h1 id="27c3ae34-af4d-8024-9fa3-c1e3fcf14486" class="">Santa Cruz County Students</h1><div id="29a3ae34-af4d-80ed-8fd2-eccfb588cdd7" class="column-list"><div id="29a3ae34-af4d-80b5-bdec-ec1212c5b1c8" style="width:50%" class="column"><p id="27c3ae34-af4d-8017-b9d4-c6c747f7f461" class="">While completing the Astronomy &amp; Astrophysics doctoral program, graduate student workers interface with both undergraduate UCSC students and high school students. While there is currently a two-quarter teaching assistantship requirement, graduate students usually inspire the next generation of scientists in ways beyond simply teaching, with research mentorship and panels. In this section, we highlight a very broad profile to who Santa Cruz students are.</p><p id="27c3ae34-af4d-8018-9563-d9665c65c571" class="">The University of Santa Cruz has built Institutional Research, Analytics, and Planning Support, a nifty tool to quickly access and visualize student data [<a href="https://iraps.ucsc.edu/">citation</a>]. For the purposes of this subsection, we highlight five pieces of information to contextualize UCSC and their students.</p><p id="27c3ae34-af4d-804a-b117-d162de1a6f12" class="">Over the past decade, the campus typically enrolls around 15,000 to 17,000 undergraduate students a year. During this time, we are consistently the second smallest undergraduate population in the UC system, only greater than UC Merced (who have about 9,000 undergraduate students).</p><p id="27c3ae34-af4d-8042-a148-cce29e75fddf" class="">From last year’s incoming class of 2023-2024, about three-eights of undergraduate students self-reported their primary race/ethnicity as African American / Black, American Indian / Alaskan Native, and/or Hispanic / Latinx. The ethnic composition of undergraduate students is 4.8 percent African American, 0.8 percent American Indian, 30.8 percent Asian, 27.5 percent Chicanx/Latinx, 0.2 percent Pacific Islander, and 30.6 percent European American. While holding the Hispanic Serving Institution label, the campus does not serve many Black and Native American undergraduate students.</p><p id="29a3ae34-af4d-80d8-8a17-d98d99491166" class="">
+</p><figure id="29a3ae34-af4d-8099-a003-ed0a4e27fe05" class="image"><a href="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.43.24.png"><img style="width:720px" src="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.43.24.png"/></a></figure><p id="29a3ae34-af4d-8061-bd19-f67cef8bb1c4" class="">
+</p><p id="27c3ae34-af4d-8090-bcc5-f246248e37d4" class="">Of the 2,370 graduating students who responded to UCSC’s First Destination Survey, most earn an average annual salary of $40,000 directly after graduation. Many students have graduate school plans, with 17 percent planning to attend graduate school and 45 percent planning to apply, applied, or deferred. From the respondents who are planning to apply for or are attending graduate school, most (61 percent) seek a Masters degree and only 19 percent look for a PhD doctoral program.</p><p id="27c3ae34-af4d-8008-94f6-ecf87b46aab9" class="">Most students at UCSC are European American, Asian, and Chicanx, with a very sparse population of African American, American Indian, and Pacific Islander undergrads. From the previous section on the local economy of Santa Cruz, most students are entering what the economic report would describe as a “low-wage” job, suggesting the university may better prepare students for jobs. Directly affecting us, the Physics (Astronomy) degree has overtaken the Physics degree for both proposed and declared majors.</p><p id="27c3ae34-af4d-80d9-972a-fe4dd603d60e" class="">High school diploma recipients who earned their diploma within their 4-year cohort has held a steady rate above 83 percent for all groups. In the most recent year of 2024 within Santa Cruz County, the 4-year cohort graduation rate was 3,105 for a rate of 85 percent. Noticeably, students who are learning English are at a higher risk than others to not earn their diploma within their 4-year cohort. High school students who are homeless or learning English were more likely to drop out (15 and 14 percent for 2024, respectively), than the average of 12 percent. [<a href="https://dataportal.santacruzcoe.org/?viz=HSGRADRATES">citation</a>]</p></div><div id="29a3ae34-af4d-805d-8f1d-e9f686e42544" style="width:50%" class="column"><figure id="29a3ae34-af4d-80f5-b38f-d58b5de9dbb2" class="image"><a href="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.42.12.png"><img style="width:720px" src="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.42.12.png"/></a></figure><p id="29a3ae34-af4d-80dd-83df-c71482ebb65d" class="">
+</p><p id="29a3ae34-af4d-801c-8d04-c3ca425b5e1e" class="">
+</p><p id="27c3ae34-af4d-80d6-a6a0-ecbc469b8481" class="">The Astronomy &amp; Astrophysics Department does not offer a standalone undergraduate degree. Instead, the department partners with the Physics Department to offer a joint “Physics (Astronomy)” degree. Graduate students in the Astronomy &amp; Astrophysics Department serve their required teaching assistantships mostly within courses offered by the Astronomy &amp; Astrophysics Department. Despite a generally increased interest in the “Physics (Astronomy)” degree, there has been a decreased interest in the standalone “Physics” degree.</p><p id="27c3ae34-af4d-80f4-b378-d1f12e98f7d6" class="">Over the past fifteen years, there is a 90 percent two-year retention rate and 80 percent three-year retention rate. Between 2011 and 2018, there has been a slight increase from 50 to 60 percent of undergraduate students who graduate within four years. In the same time period, the amount of people who graduate in five years decreased from 20 percent to 12 percent. Undergraduate students who graduate after six or more years are in the single digit percentages.</p><p id="29a3ae34-af4d-80fa-a7f8-d02d989382a0" class="">
+</p><p id="29a3ae34-af4d-8083-ba88-ecf463e43750" class="">
+</p><p id="29a3ae34-af4d-80db-83c1-d2600d677426" class="">
+</p><figure id="29a3ae34-af4d-8035-92a5-e4c301e1a24b" class="image"><a href="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.44.24.png"><img style="width:720px" src="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.44.24.png"/></a></figure></div></div><p id="2823ae34-af4d-802d-a7db-cf5ea45887dd" class="">
+</p><hr id="2823ae34-af4d-80fc-901e-c880682d0023"/><h1 id="27c3ae34-af4d-8020-ab7c-c766ebaf2718" class="">Immigration to Santa Cruz</h1><p id="27c3ae34-af4d-80a1-8861-e135ff6a6dec" class="">Here we detail the demographics of immigrant communities in the bay area/ Santa Cruz county. As of 2025, roughly 20% of residents of the city of Santa Cruz were born outside of the U.S [<a href="https://datausa.io/profile/geo/santa-cruz-county-ca">citation</a>]. Although the majority of permanent residents in the city Santa Cruz are racially white, there is a large Hispanic population in surrounding towns like Watsonville with 83% of the population in Watsonville identifying as Hispanic. Furthermore, the most common occupation in Watsonville is farming, fishing, or forestry [<a href="https://datausa.io/profile/geo/watsonville-ca/">citation</a>]. Citizenship status in Watsonville is at 78% which is lower than the state average. Some of the largest nearby cities to Santa Cruz all have populations with more than 60% identifying as Hispanic, including Watsonville, Salinas, and Gilroy [<a href="https://censusreporter.org/profiles/16000US0629504-gilroy-ca/">citation</a>].</p><p id="27c3ae34-af4d-80dd-80b4-e056d8499229" class="">There is also a large Asian immigrant population in San Jose and San Francisco. There is currently a lively Japan-town in San Jose that had slow and steady development until 1942 with World War II hysteria and the resident’s forced relocation to internment camps [<a href="https://jtown.org/history">citation</a>]. After the war, the community had to rebuild to the flourishing neighborhood it is today.</p><p id="27c3ae34-af4d-8015-a713-fc333be4a3e5" class="">In San Jose, there is a Little Saigon neighborhood which holds the record for the largest population of Vietnamese people outside of Vietnam. Although Santa Cruz is not technically in the “Bay Area”, San Francisco is only a 90-minute drive away. The Chinatown in SF is the oldest Chinatown in North America with immigrants drawn to the US during the California gold rush and job opportunities like constructing the transcontinental railroad. SF is also home to another Japantown and a Manilatown. There have been efforts to gentrify these neighborhoods which have been meant with resistance within those communities [<a href="https://en.wikipedia.org/wiki/Manilatown,_San_Francisco">citation</a>].</p><p id="27c3ae34-af4d-802f-848a-cb03d7effcb9" class="">It is important to be conscientious of the demographics of our neighboring cities because the students from those cities will look towards us during outreach events as role models in science fields.</p><p id="29a3ae34-af4d-8067-9dc2-dc54d3779c65" class="">
+</p><hr id="29a3ae34-af4d-8072-b3f7-feba91571fcb"/><h1 id="27c3ae34-af4d-804d-a408-e622fc2c4fdb" class="">ICE + YARR</h1><div id="29a3ae34-af4d-80c1-b6fb-f8d09cdd1960" class="column-list"><div id="29a3ae34-af4d-80bf-a033-e25e3a4687e1" style="width:45.83333333333333%" class="column"><p id="27c3ae34-af4d-80f8-988e-e184654cbe22" class="">In the mid-1980s, Santa Cruz affirmed that it is a Sanctuary City, meaning that it will not cooperate with federal law enforcement (such as Immigration and Customs Enforcement (ICE)) on immigration matters. Since then, both Santa Cruz city and county have reaffirmed their commitment to not cooperate with ICE — the one condition is that a court may rule, under certain circumstances, that the city/county must work with ICE on a case [<a href="https://lookout.co/santa-cruz-reaffirms-its-status-as-a-sanctuary-city/story">citation 1</a>].</p><p id="27c3ae34-af4d-8082-adeb-d98ebc0b4da7" class="">Soon after Trump was inaugurated, in February 2025, a Santa Cruz resident was detained by ICE and deported to Tijuana with no warning to city or county officials that ICE was in the area [<a href="https://lookout.co/ice-quietly-deports-santa-cruz-resident-after-22-years">citation</a>]. There have also been at least 8 times since January of 2025 that ICE has visited Watsonville — a city in Santa Cruz county that is majority hispanic and latino [citation].  Because of these events, the county has re-affirmed their commitment to not sharing personal information with ICE including immigration status as well as not allowing ICE access into private county spaces or health clinics <em>if</em> they do not have a signed judicial warrant [<a href="https://www.santacruzhealth.org/LinkClick.aspx?fileticket=Neut9AtJKPs%3D&amp;portalid=7">citation 1</a>, <a href="https://www.santacruzcountyca.gov/sanctuary.aspx">citation 2</a>]. A judicial warrant has a header that says “United States District Court” and is signed by a judge, whereas an ICE administrative warrant has a heading that says “U.S. Department of Homeland Security” and is signed by an ICE officer.</p><p id="27c3ae34-af4d-801e-b337-cd2a4ea566aa" class="">In response to this, grads in our department and across campus organized a “Know Your Rights” training. In our department, this training was put on by Your Allied Rapid Response (YARR), a community-run emergency response network that trains legal observers to verify ICE sightings and act in solidarity with victims [<a href="https://santacruzrapidresponse.org/">citation</a>]. The number for YARR is helpful to have on hand, and should be saved to your phone — (831) 239-4289!</p><p id="27c3ae34-af4d-80a8-9325-f82fa3a81b16" class="">Our department training included information on how to respond if ICE tries to enter a “limited access space” on campus, community resources, information on how to differentiate between an ICE administrative warrant and a judicial warrant, and tricks that ICE may use, and it was attended by grads, postdocs, and faculty! The link to access the slides for this presentation can be found <a href="https://docs.google.com/presentation/d/1Sa1dVKUVphAxdVXhYra43qxisCnqBOlA/edit?usp=sharing&amp;ouid=116858681751628293600&amp;rtpof=true&amp;sd=true">here</a>.</p><p id="27c3ae34-af4d-80ff-8937-d845fb0e0dde" class="">Example judicial warrant!</p><p id="29a3ae34-af4d-8051-9ec7-deae8db081b5" class="">
+</p></div><div id="29a3ae34-af4d-8009-abac-d4f8abab5176" style="width:24.999999999999993%" class="column"><figure id="29a3ae34-af4d-80d8-be48-d94279c93dbd" class="image"><a href="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.50.52.png"><img style="width:672px" src="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.50.52.png"/></a></figure></div><div id="29a3ae34-af4d-806e-8412-e3a8424af0c9" style="width:29.166666666666668%" class="column"><figure id="29a3ae34-af4d-80f7-a2c1-ca7977c8ad62" class="image"><a href="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.51.13.png"><img style="width:720px" src="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.51.13.png"/></a></figure></div></div><p id="29a3ae34-af4d-80d3-9396-f6b503c4594c" class="">
+</p><div id="29a3ae34-af4d-8022-aeed-d822b6ab2c9b" class="column-list"><div id="29a3ae34-af4d-80a2-a7c8-d35edbdf3d10" style="width:81.25%" class="column"><p id="27c3ae34-af4d-8033-a9e9-ffbe151bbc05" class="">You may be wondering, what is a “<strong>Limited Access Space</strong>?” A limited access space is defined as spaces on campus that are generally locked — including buildings, offices, and classrooms. If ICE tries to enter the classroom, just say: “I am not obstructing the process, but I am not authorized to grant you access to this limited access space. I need to contact Campus Counsel. Please leave.” (For reference: the phone numbers for Campus Counsel are (831) 459-1848 or (831) 459-2662, their email is ). We have put together a door sign regarding limited access spaces and how to interact with ICE if they show up, and our union local (UAW 4811 Santa Cruz) has put together some additional <a href="https://drive.google.com/drive/folders/1XwqCwBW_RUK3L6l5K3HXeuqeBDOXA69W?usp=sharing">flyers and signs</a> for our campus limited access spaces.</p><p id="29a3ae34-af4d-8007-b4d3-dc0d59ec110b" class="">
+</p><p id="27c3ae34-af4d-8007-9862-d5a7903a02c8" class=""><strong>Resources to keep handy:</strong></p><ul id="27c3ae34-af4d-802f-9a4b-d20069456403" class="bulleted-list"><li style="list-style-type:disc">YARR contact information: (831) 239-4289</li></ul><ul id="27c3ae34-af4d-8084-9069-c136127df075" class="bulleted-list"><li style="list-style-type:disc">YARR Astronomy Department training <a href="https://docs.google.com/presentation/d/1Sa1dVKUVphAxdVXhYra43qxisCnqBOlA/edit?usp=sharing&amp;ouid=116858681751628293600&amp;rtpof=true&amp;sd=true">slides</a></li></ul><ul id="27c3ae34-af4d-8062-b225-d4397808d109" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.ilrc.org/red-cards-tarjetas-rojas">Red Cards</a>: these are helpful cards to keep on hand if you encounter ICE. There are copies in the Astro mailroom, as well as an example in this packet!</li></ul><ul id="27c3ae34-af4d-80cc-a398-d5417b9eb9af" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/file/d/1ULL6njW27M1cp66gwz-xRdTARnE7AQOO/view?usp=drive_link">Flyer with immigration emergency resources</a>: made in our department with contact information for UCSC Campus Counsel (831-459-1848), UAW Immigration Assistance hotline (888-416-2110), Immigration Institute of the Bay Area (510-894-3639), and YARR (831-239-4289)</li></ul><ul id="27c3ae34-af4d-80df-aa03-fe7065339f6f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/file/d/1209wvW6FXpfNgdsc3HAYGsFYhWhPvjGl/view?usp=sharing">Limited Access Space door sign</a></li></ul><ul id="27c3ae34-af4d-809a-a0d8-e8a61a2e2aee" class="bulleted-list"><li style="list-style-type:disc"><a href="https://drive.google.com/drive/folders/1XwqCwBW_RUK3L6l5K3HXeuqeBDOXA69W?usp=sharing">UAW Know Your Rights Door signs</a></li></ul><ul id="27c3ae34-af4d-8066-a075-e71fc59dfa1c" class="bulleted-list"><li style="list-style-type:disc">An <a href="https://docs.google.com/document/d/1W0vtrRfwi61gGcvXV4WYokJM6L5cg7RDtjSYOY3op9o/edit?usp=sharing">Immigration Safety Packet</a> with easy ways to make a plan for if things go wrong</li></ul><p id="27c3ae34-af4d-802b-ac58-f979e7812506" class="">UCSC legal counsel also holds monthly Education Opportunity Programs webinars regarding KYR trainings led by UCSC legal counsel. For more information, see the <a href="https://eop.ucsc.edu/undocumented_student_services/immigration-legal-services/know_your_rights.html">Education Opportunity Programs website</a>!</p><p id="29a3ae34-af4d-8082-9a18-f2104bcd6559" class="">
+</p></div><div id="29a3ae34-af4d-8036-a918-f91d2f5d4bea" style="width:18.750000000000004%" class="column"><figure id="29a3ae34-af4d-8020-aa94-d65870979545" class="image"><a href="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.51.33.png"><img style="width:470.9765625px" src="Demographics%20of%20Santa%20Cruz%20&amp;%20UCSC/Screenshot_2025-10-28_at_11.51.33.png"/></a></figure></div></div><p id="29a3ae34-af4d-804e-9842-e335a80a4936" class="">
+</p><hr id="29a3ae34-af4d-800f-8caa-d782ce721d43"/><h1 id="27c3ae34-af4d-8062-a5cd-f5fa35cecd0b" class="">NIMBYs and an affordability crisis</h1><p id="27c3ae34-af4d-80b6-af83-e05b03c3311b" class="">NIMBY stands for “Not In My BackYard” and describes the ideology of opposing affordable housing development in your own neighborhood, because it will “decrease your property value” or whatever, while simultaneously understanding that there is a lack of affordable housing supply in your city. The main sources of pushback from the NIMBYs are that they don’t want tall buildings that block their views, they don’t want to increase traffic congestion, they don’t want taxes increased on homeowners to help subsidize the cost to the city of building affordable/rent-stabilized units, and so forth. There are also counter-culture NIMBYs, though! Some environmental groups push back on housing building measures because of the negative impacts of development on the environment and/or undeveloped land not being left alone. [<a href="https://lookout.co/urban-density-downtown-santa-cruz-this-group-wants-to-stop-city-from-getting-taller/">citation</a>]</p><p id="27c3ae34-af4d-80e6-bb12-e038e18ca5f0" class="">There is a housing affordability and availability crisis in Santa Cruz, and that largely arises from wealthy residents who find ways to minimize or cancel new housing developments due to their NIMBYism. They love to attend local zoning board meetings. For example, we recently voted on <a href="https://santacruzlocal.org/election/2024-mar-05/measures/m-housing-for-people/">Measure M</a>, when the NIMBYs forced the City Council to put a building development project on the election ballot as a city-wide referendum, as opposed to just a simple majority City Council vote, which delayed the project nearly a year and drove costs up. Additionally, it’s worth pointing out ~30% of people living in Santa Cruz are considered non-permanent residents (namely, students and unhoused people), so they can’t vote on local measures!</p><p id="27c3ae34-af4d-80e7-abba-c9fed941015c" class="">Santa Cruz County has the most expensive rental market in the <em>entire country</em>, and that’s been the case for <em>three consecutive years</em>. [<a href="https://lookout.co/santa-cruz-county-named-the-nations-least-affordable-rental-market-for-third-straight-year-and-the-gap-has-widened/story">citation</a>]</p><p id="27c3ae34-af4d-807b-a242-c883bcd57ad2" class=""><em>Quote: “A “housing wage” is the hourly wage that a full-time worker would have to earn in order to afford a typical rental home without spending more than 30% of their income on housing costs. In Santa Cruz County, that means renters would have to earn an average housing wage of $81.21 an hour to pay that rent, up from $77.96 last year, also about a 4% increase. A county resident making the state minimum wage of $16 would have to work five jobs to meet that amount.”</em></p><p id="27c3ae34-af4d-80d9-91a0-e0ec42b3b43b" class="">Post-COVID, the affordability crisis has been exacerbated further. Wealthy people working in Silicon Valley began working from beachfront homes in Santa Cruz during COVID, and now realize that they can do that forever. As a result, there are now more residents of Santa Cruz who are tech/finance bros on permanent WFH for their San Jose-area companies. They can buy multi-million dollar homes, but we can’t!</p><p id="27c3ae34-af4d-808b-9867-cb5ba734ec52" class="">Undergrads at UCSC really bear the brunt of this. Per a 2024 survey, 29% of UCSC undergrads were unable to make all necessary housing payments during the academic year preceding the survey. [<a href="https://www.universityofcalifornia.edu/about-us/information-center/university-california-undergraduate-experience-survey-ucues-data-tables-2024">citation</a>] Per that same survey, 16% of UCSC undergrads reported that “Inconsistent access to housing, or homelessness” was an obstacle to their “school work or academic success” either occasionally (9%), frequently (4%), or all the time (3%), during that academic year. [<a href="https://www.universityofcalifornia.edu/about-us/information-center/university-california-undergraduate-experience-survey-ucues-data-tables-2024">citation</a>]</p><p id="27c3ae34-af4d-8004-8fcf-c3c026511500" class="">The university could do more to address the housing shortage, for their undergrads in particular. They are in the process of building more student housing, but it took &gt;10 years to get going, delayed due to environmental and budget concerns. They are tearing down and rebuilding Family Student Housing (FSH; pronounced “fish”), but forcing current FSH residents to pay more money in rent <em>to the university</em> at the rebuilt FSH, for the housing they were promised and then forced out of. The university recently stopped guaranteeing housing past the first year of undergrad; now, all students beyond their first year are entered in a lottery. Students who have taken too many additional quarters to complete their degree are not allowed to enter the lottery. Students with disability accommodation requirements are not guaranteed housing for the duration of their degree either! This is also true for graduate students at Graduate Student Housing.</p><p id="27c3ae34-af4d-801b-9525-d3376a583207" class="">“Rent burden” is defined by housing scholars as spending more than 30% of wages on rent. According to UAW membership surveys, in 2022, 92% of graduate students and 60% of postdocs across the University of California (UC) are rent-burdened.</p><p id="27c3ae34-af4d-80c1-aeb9-e14c817a673b" class=""><em>Quote from the Economic Report [</em><em><a href="https://workforcescc.com/wp-content/uploads/2025/08/2025-SOW-Report-4.6lb.pdf">citation</a></em><em>]: “While median household income has increased 21 percent since 2020, home prices have risen by 26 percent, making homeownership increasingly out of reach.”</em></p><p id="27c3ae34-af4d-80ed-828b-d3cdd5e78334" class="">This number is unnerving and unacceptable, which is why cost of living adjustments are a large priority when bargaining new contracts between the union and the university.</p><hr id="29a3ae34-af4d-806b-af2c-ee9293a61a5d"/><p id="29a3ae34-af4d-80bb-a29b-c1e253f875f6" class="">
+</p><h1 id="27c3ae34-af4d-80dd-a200-fe365c4acd2e" class="">US Government Representation</h1><p id="27c3ae34-af4d-8050-a31d-f9d059d1ea74" class="">Living in the City of Santa Cruz, residents usually fall either in the 95060 or 95062 zip code. Both zip codes have the same set of elected government representatives [<a href="https://usmapguide.com/california/santa-cruz-county-zip-code-map/">citation1</a> &amp; <a href="https://www.270towin.com/elected-officials/address.php?s=95060">citation2</a>]. In the US Senate, residents are represented by Alex Padilla and Adam Schiff. Alex Padilla’s next election is in 2028. While confronting Department of Homeland &amp; Security Head Kristi Noem, he was tackled and detained [<a href="https://www.padilla.senate.gov/newsroom/news-coverage/nyt-calif-senator-forcibly-removed-and-handcuffed-after-interrupting-noem/">citation</a>]. Adam Schiff’s next reelection is in 2030. In the US House of Representatives, residents are represented by Jimmy Pannetta, who sits on the House Committee on Ways and Means and the House Committee on the Budget. His next reelection is 2028 (every 2 years). Within the state of California, residents are represented by a California Senator [<a href="https://en.wikipedia.org/wiki/California_State_Senate">citation</a>] and California Assembly Member [<a href="https://en.wikipedia.org/wiki/California_State_Assembly">citation</a>]. The current state senator is John Laird, whose next election is 2028 (every 4 years). The current state assembly member is either Dawn Addis or Gail Pellerin, with both of their next elections in 2026 (every 2 years). A notable and nearby politician is US House Rep. Zoe Lofgren, who is the ranking Democrat on the House Science, Space, and Technology Committee while representing CA-18 (our neighbor district, runs from San Jose at its north end to approximately Paso Robles at its south, inland of the coast).</p><p id="27c3ae34-af4d-8050-9f84-e4e0d6c5891a" class="">After proposed federal government cuts were publicized around March 2025, a group of faculty members (led by Rebecca Jensen-Clem) met with Jimmy Panetta to voice concerns regarding the NSF, NIH, and NASA proposed cuts. They also visited Senator Laird’s office near SF and spoke with a junior staffer [discussed in the March 31, 2025 <a href="https://docs.google.com/document/d/1PKpW1iLF2WOuRpTzByarb25PdjXDLcBt8owZp6cGSxA/edit?usp=drive_link">department townhall</a>]. We should encourage them to keep up this pressure!</p><p id="29a3ae34-af4d-80ff-b75a-cb42d7de5121" class="">
+</p><p id="29a3ae34-af4d-80e4-b1ad-fc0e7a183b49" class="">
+</p><hr id="29a3ae34-af4d-8078-ac9a-d4849fed052a"/><hr id="29a3ae34-af4d-80f7-a4ba-ebf05d15a052"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,708 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>How our department works and also doesn’t</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2763ae34-af4d-80ee-b32f-c53ed11a738b" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⚖️</span></div><h1 class="page-title">How our department works and also doesn’t</h1><p class="page-description"></p></header><div class="page-body"><div id="29a3ae34-af4d-80a3-ae00-c2fa702ae8a0" class="column-list"><div id="29a3ae34-af4d-804c-a323-d627541d38e2" style="width:50%" class="column"><h1 id="27c3ae34-af4d-80a2-9a86-d48c5c4c734d" class="">Funding Issues</h1><p id="27c3ae34-af4d-8095-8f4b-c61b2c8e79ac" class="">In Fall 2024, UCSC announced that it was in a “budget crisis,” with no explanation offered for the &gt;$100M shortfall they had found. Through word of mouth, the belief now is that the university hired new positions with temporary COVID stimulus money, but decided to keep those positions on post-COVID, and no one realized this would be a problem. All departments were told to “do less with less” - and then Trump got re-elected.</p><p id="27c3ae34-af4d-8012-b1c0-d3ddd363bdca" class="">The Trump administration, cutting NSF, NIH, and NASA funding, has clearly impacted the research operations of UCSC, which were already under tremendous strain due to our pre-existing budget crisis. In our department, both Lamat and SIP saw huge cuts to funding they depended on, which influenced their Summer 2025 operations. Additionally, the NSF GRFP program was slashed, which has habitually supported nearly ⅓ of the graduate students in our department. The faculty are angry - at every opportunity, they’ve been pushing NASA, NSF, and government officials for answers. In April 2025, Mark Clampin, Acting Deputy Associate Administrator in the Science Mission Directorate at NASA, gave a colloquium to our department about the future of NASA’s missions. He got lit up by Ryan Foley and others during the Q&amp;A. He was asked, “What is NASA doing to protect science and scientists?” and he wouldn’t give any answer of substance.</p><p id="27c3ae34-af4d-80d0-9662-d138523342fc" class="">Due to concerns about funding, the department decreased the accepted number of graduate student applicants compared to previous years, and because of this, our incoming graduate student cohort starting in Fall 2025 is smaller than average. Our department has a shockingly low operational budget to mitigate the effects of federal funding cuts - in our 2024-2025 External Review Committee (ERC) report, the ERC members were “startled” by the numbers they saw.</p><p id="27c3ae34-af4d-808b-848b-f2de1445412a" class=""><em>Quote: “We were startled by the low level of the department’s annual discretionary budget and other discretionary resources. The absence of flexibility in department finances leaves it poorly positioned to weather the inevitable ups and downs of external funding, and it leaves no capacity to invest in new research directions or in activities that could benefit undergraduates, graduate students, or postdocs. Every university budgets differently, but the fraction of IDC that returns to the division and department strikes us as astonishingly low. … One consequence of the low level of discretionary resources is that the faculty have little incentive to think collectively about department priorities, since they have no department-level funds to invest in them. A second likely consequence is risk aversion, since most new initiatives must be externally funded from the start and there is no cushion for funding shortfalls. We recognize that the current fiscal situation of UCSC does not allow for significant increase of resources in the near term, but sustaining department excellence in the long term will require more collective decision-making on how to use its resources, which in turn requires that those resources exist in the first place.” </em>[<a href="https://drive.google.com/drive/folders/17Nub4e55BylD36ObzrkiQenWGLd2lrUB?usp=sharing">Link to whole ERC report</a>]</p><p id="27c3ae34-af4d-8068-bf96-d0be53a4abae" class="">Besides funding support for graduate students, postdocs, and researchers, the primary cost the department incurs is our weekly colloquia. With the campus level budget cuts, even those events are in jeopardy.</p><p id="27c3ae34-af4d-8036-8eac-e4e704baffe1" class="">Funding is also a source of tension between the faculty. As described, the amount of financial investment in our department from UCSC is low. This investment takes the form of grant money allowed to flow back into the department for operations, TAships allotted to the department’s graduate students, etc. The department is only given ~15 TAships per year, but the department has made a financial commitment to the graduate students to pay them all year. So, if a faculty member finds they do not have enough grant money to pay a graduate student, the department must step in and provide one of the allotted TAships to that student. Some faculty members <em>habitually </em>do not have grant money for their students, and yet continue to take on new graduate students. Essentially, if one professor continues to do research with new students but relies on these new students receiving TAships to get paid, that amounts to the university subsidizing the research of that one professor, at the expense of other faculty who now have no wiggle-room if a grant of their own falls through.</p></div><div id="29a3ae34-af4d-80a5-ad9a-ddf01c0ae0d1" style="width:50%" class="column"><h1 id="27c3ae34-af4d-80c5-95ba-d8288ff1252d" class="">Holding advisors accountable</h1><p id="27c3ae34-af4d-80b1-a7bc-f7185d9fb7cb" class="">Toxic advising relationships and power dynamics are unfortunately pervasive throughout academia, and it’s important to keep in mind that our department is historically not immune. Fortunately there is precedent in our department for actions being taken to make toxic advisors engage in remedial mentorship/sensitivity training, who have then shown positive growth.</p><p id="27c3ae34-af4d-80d3-a6ba-d021cf91313e" class="">However, it is critical to understand that the official university channels for handling toxic advisors can be unreliable, and often serve the interests of the university rather than protecting vulnerable parties. A key example within the division is the university recently placing a Chemistry academic researcher on indefinite administrative leave in retaliation for reporting workplace abuse in a lab with a storied history of treating its workers poorly. Department and administrative politics can take priority over worker safety in these channels, and so it is important to understand how to receive additional support externally when necessary.</p><p id="27c3ae34-af4d-8092-bd78-ca6d0904ff0a" class="">The foremost defense we have is each other, and your most important form of support is to realize you are not alone! It is very common to feel isolated and stuck when you are having negative interactions with your advisor, but <strong>your fellow grads are here to support you every step of the way</strong>. No faculty in the department is “too popular” or “well-liked” for us to turn our heads if they are mistreating their students. In the past, discussions among Astronomy graduate students (both advisees and not) have identified patterns of toxic behavior in faculty, connected people to appropriate support structures, and leveraged the department and university into taking remedial action. Even if the department/faculty do not hold people accountable in the ways that they should, we have the power to continue pressuring them until appropriate actions are taken. From this perspective, talking amongst coworkers has been the primary driver of identifying, addressing, and correcting toxicity, and supporting affected students throughout.</p><p id="27c3ae34-af4d-8036-afb7-d67f658d34a6" class="">It’s important to have these discussions with your fellow students even before things go blatantly south. Especially at the beginning of graduate school, openly talking about advising relationships probes questions such as:</p><ul id="27c3ae34-af4d-80cb-8e50-c569cef1ff84" class="bulleted-list"><li style="list-style-type:disc">What are reasonable expectations to have of a healthy and productive advising relationship?</li></ul><ul id="27c3ae34-af4d-80cd-b6fe-cd3a69d9c040" class="bulleted-list"><li style="list-style-type:disc">What are healthy boundaries (personal and professional) to set with an advisor and how does one establish them?</li></ul><ul id="27c3ae34-af4d-8074-a642-e21b48eca403" class="bulleted-list"><li style="list-style-type:disc">What resources do we have at our collective disposal to evaluate and adjust an advising relationship?</li></ul><p id="27c3ae34-af4d-808a-9877-cf5a4527ecc5" class="">Community among graduate students is one of our department’s greatest strengths, and this extends far beyond just getting along with each other socially. We are all here to look out for one another, and shape our support systems in ways that actually work for junior researchers!</p><p id="27c3ae34-af4d-80ba-9eb2-f0f45d6798d8" class="">Resources:</p><ul id="27c3ae34-af4d-8069-860f-d1914139dc97" class="bulleted-list"><li style="list-style-type:disc">Advising/Thesis Committees: this depends partially on how engaged your committee is, but Ruth is usually a good bet to get things moving</li></ul><ul id="27c3ae34-af4d-80d4-8679-d4f9b12f1db6" class="bulleted-list"><li style="list-style-type:disc">Union Representatives: there are several within our own department!</li></ul><ul id="27c3ae34-af4d-8018-9d6c-f95172799878" class="bulleted-list"><li style="list-style-type:disc">University reporting resources: <a href="https://equity.ucsc.edu/">https://equity.ucsc.edu/</a></li></ul><ul id="27c3ae34-af4d-809c-a2c4-ffad29a00825" class="bulleted-list"><li style="list-style-type:disc">University Ombuds office: <a href="https://ombuds.ucsc.edu/">https://ombuds.ucsc.edu/</a></li></ul><ul id="27c3ae34-af4d-806a-b9bd-ef2ac5dfeb38" class="bulleted-list"><li style="list-style-type:disc">Your fellow grads and friends :)!</li></ul><p id="29a3ae34-af4d-8050-8b33-db8727720553" class="">
+</p></div></div><hr id="29a3ae34-af4d-8020-9176-d534f4c0d474"/><div id="29a3ae34-af4d-8044-953a-ffe283990c84" class="column-list"><div id="29a3ae34-af4d-80fb-b1cc-cd60dca53a49" style="width:50%" class="column"><h1 id="27c3ae34-af4d-809d-bf3c-c9a4600f7681" class="">Committees</h1><p id="27c3ae34-af4d-8052-8015-d420fa12f7c6" class="">The department maintains a variety of committees, each with a faculty member chair, which are nominally meant to organize the department’s efforts in different areas. Most of these committees are only faculty members, though some include graduate students and postdocs.</p><p id="27c3ae34-af4d-804e-b9fc-ffc8edc6607e" class=""><em>Current list of committees: (*includes non-faculty) Colloquium/Seminar*, DEI*, Admissions*, Alumni engagement and money-making, Curriculum, Advising, and Grad finance</em></p><p id="27c3ae34-af4d-800e-a11c-ce69140cc82e" class="">Beyond these topic-specific committees, there is also an intradepartmental committee that meets bimonthly. This committee has no name, so it’s confusing. (Current 2025-2026) Members include: Department Chair (Jonathan), Graduate Program Director (Brant), Department Manager (Alyssa), Department Assistant (Kali), Head Grads (Alejandra and Mika), Junior Grad Liaison (TBD), and two postdocs representatives (Artem and Ethan). This committee formed because the grads pushed for it. The initial idea was that we wanted a committee where we could bargain for some of the initiatives proposed in the Astro4Palestine letter, specifically the demand of funding transparency surrounding DoD funding. The committee had its first meeting in May 2025, and has continued to meet every other month since then. The clarity of communication has already proven to be a tremendous improvement on the existing system of the Department Chair attending the all-grads meeting (sometimes). Both the grads and postdocs on the committee are happy about its existence. That said, the faculty love to forget important shit, so we need to ensure there is a sustained effort for this committee to continue meeting, especially when the faculty start saying they’re “too busy for this”.</p><p id="27c3ae34-af4d-80d8-aacf-ee197ee8e6ee" class="">The DEI committee had been defunct for several years before the 2024-2025 academic year, but now it’s back, thanks to a fantastic group of grads who joined the committee and made it do stuff! Our department has many outward facing DEI efforts including programs like LAMAT and, with UCO, ASTRAL, but the motivation for the DEI committee is inward facing to promote accessibility and equity in the department. The main issue now is the current federal anti-DEI policies. In order to remain a committee, we must be cognizant that the mission and goals of the committee benefit all students in the department. To be clear it already did that, but now we have to be more explicit.</p><p id="27c3ae34-af4d-8041-abaf-d568c9c61772" class="">The Colloquium committee was frequently criticized for the lack of diversity of invited speakers - it was overwhelmingly white men from fancy schools. Kevin Bundy, in a meeting with grad students about this while he was chairing the committee, stated there are two main constraints that limit the diversity of the speaker slate: (1) He wasn’t getting enough suggestions from the department members, and (2) the sorry-but-I-can’t response rate is very high. So, for 35 speakers per year, Kevin really needs a pool of &gt;50 people to ask. Without that pool, he wasn’t able to prioritize DEI when making the slate of speakers. It’s a shitty explanation and excuse, but it does point out that we, the community of the department, have some say in this! Please suggest speakers for colloquium and FLASH talks, especially if you have academic friends visiting the area.</p><p id="27c3ae34-af4d-808e-ab45-ea4c1c91a3c9" class="">Now, the Colloquium committee has no money! The university budget crisis has led to a “do less with less” mentality. This means the department has less money to do department things. The primary cost the department incurs is colloquium - per Jonathan in May 2025, it’s the largest bucket of money the department spends down, besides financial support/tuition on students. For the 2025-2026 academic year, we’ve been informed that we can really only afford to bring in speakers who are within driving distance. The hope is that this isn’t a permanent change, but of course, non-ideal. If we successfully “do less with less” for too long, the university will never give us “more” than “less” again!</p><p id="27c3ae34-af4d-80fc-95c4-cb14a1cc5f4d" class="">The Grad Finance committee was formed by the department in response to university-level fuckery. The university decided in Fall 2023 that NSF GRFP fellowships should be considered 12-month fellowships, not academic-year-only (9 months) as they had been before that point. Our department has more GRFP fellows than most at UCSC, so this became a notable problem for us. This introduced a lot of logistical headaches for the faculty - one year of GRFP was basically equivalent to our academic-year pay as grad students, but is well-below our total-year pay, because we get paid much more in the summer. The committee formed to find a solution for “topping up” GRFP fellows a bit each month, to bring that salary up to parity with the yearly salary of all grads in our department, and they were successful in doing so. Now, the committee deals with other issues surrounding the funding of grad students. Especially with the Trump administration NSF/NASA budget fuckery, they meet to ensure that all students have funding support, and find money when it’s not immediately available to the advisor. Most of this work happens behind-the-scenes - the student likely doesn’t know that their funding gaps were ultimately filled by this committee finding a creative solution.</p></div><div id="29a3ae34-af4d-802b-8606-fe48dbdb735a" style="width:50%" class="column"><h1 id="27c3ae34-af4d-80d4-b803-e96e9566e1aa" class="">Discretionary statements</h1><p id="27c3ae34-af4d-8043-8cb6-eda5515483b4" class="">In 2020, the department wrote a <a href="https://astronomy.ucsc.edu/about/#DEI">statement</a> in support of the Black Lives Matter (BLM) movement and had a banner on the front page of their website in solidarity with BLM. In the past year (2024), the UC Board of Regents created a new <a href="https://regents.universityofcalifornia.edu/regmeet/july24/j2attach1.pdf">policy</a> stating that these types of political statements can no longer be on the front page of department websites, and must be put on a discretionary website page. Students and faculty in the astronomy department alike were understandably outraged by this new policy. However, momentum to create action was slow and communication between faculty and students on the topic was virtually non-existent.</p><p id="27c3ae34-af4d-8025-adc3-c8d60c7ff6fe" class="">It wasn’t until the DEI committee began a campaign to reinstate the BLM statement that we started to see progress. Again, everything that happens in this department happens slowly, so it took several months before the faculty arrived at a departmental discretionary statement policy. But part of the UC’s policy is that you couldn’t simply reinstate old discretionary statements, they had to be made new. So then, the DEI committee began drafting an updated BLM statement, edited by the grad &amp; postdoc community, and as of September 2025, it sits in the inbox of the department chair, waiting for the next faculty meeting for it to be discussed. Part of the <a href="https://docs.google.com/document/d/1DmAFUbxzKx_bjEPaSPoqAWZr1kMx3TjxWP3svn7Pd74/edit?tab=t.0">department’s policy</a> is that the statement must be approved by all but two faculty. If the updated statement fails to reach that mark, the DEI committee will revise the statement for another round of votes.</p><p id="27c3ae34-af4d-80af-9fb9-df4f711d9fa1" class="">This whole process shows the faculty have passion for social justice but lack of inertia to get things going. Most of the momentum comes from the grad &amp; post-doc community even though we have the most to lose when staking a claim on a movement we are passionate about. There are other discretionary statements we, as grads, would like to see faculty take interest in supporting including a statement to pledge they will protect international students as their rights are currently under attack, but this statement will most likely take several months before being published.</p><h1 id="27c3ae34-af4d-80cd-9781-f7387736e483" class="">Administrative staff issues</h1><p id="27c3ae34-af4d-80d8-8759-d7f7360ae179" class="">A recurrent issue in our department has been an inability to keep administrative staff around for more than ~1 year. There are currently 5 permanent positions of administrators in our department: Department Manager, Graduate Advisor, Department Administrative Assistant, Astronomy Program Coordinator (primarily OWL, Astrobiology), Managing Director of Lamat.</p><p id="27c3ae34-af4d-80a8-9d89-df72b47393d7" class="">The primary explanation offered by the department chairs over the years has been that we couldn’t pay the admin in our department competitively. Apparently, the divisional rule for determining staff salaries was based on undergraduate enrollment - but, the astrophysics concentration is under the physics department, not astronomy! This resulted in admin being offered higher salaries in other UCSC departments (namely, engineering departments) and leaving Astronomy. As of early 2025, this issue has been addressed - the department negotiated with the division to be given an exception to the salary rule, so our admin are now paid at salaries that are (a) irrespective of undergrad enrollment, and (b) competitive with other UCSC departments.</p><p id="27c3ae34-af4d-8050-87f1-dc20ad751b2b" class="">However, this doesn’t address the whole problem. Because our department relies heavily on external grants for funding, our admin deal with significant amounts of complex paperwork behind the scenes - as such, they are overworked and deserve higher pay. The admin have also reported that they deal with rude department members all of the time, so that certainly doesn’t increase the likelihood of them staying. “Rudeness” here being disrespectful language, acting like admin should be waiting on us hand and foot, etc. This is definitely a recurrent problem among the faculty - multiple administrators have reported repeated incidents of rudeness from among the faculty. It has always sounded like a very small number of people are creating all of the problems, so most faculty are kind and appreciative, but still. That said, it’s not just faculty! Admin have also reported times when grads, postdocs, and other researchers were also unkind. We all have a responsibility to treat our colleagues, especially those who facilitate all of our day-to-day research, with respect.</p><p id="27c3ae34-af4d-8023-a711-d3d6a101607d" class="">The admin are most frustrated when they don’t get replies to questions they send over email to department members - please don’t force them to track you down, be responsive to their requests!</p></div></div><hr id="29a3ae34-af4d-80d0-9f48-f5a2eef7c64a"/><hr id="29a3ae34-af4d-8098-80e3-fcc26c3023fb"/><p id="29a3ae34-af4d-8068-9d66-e4624348f862" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,709 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>When we organize, we win</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2763ae34-af4d-80d3-b1c4-d7541b8fdb19" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">✊🏽</span></div><h1 class="page-title">When we organize, we win</h1><p class="page-description"></p></header><div class="page-body"><h1 id="27c3ae34-af4d-8067-95b6-d7344c052c57" class="">We’re in a union!</h1><div id="29a3ae34-af4d-80dc-b25e-d9f7c1f043ec" class="column-list"><div id="29a3ae34-af4d-8005-bb60-efa39d16bcb4" style="width:50%" class="column"><p id="27c3ae34-af4d-805e-89db-ca3950cc2923" class=""><em>“What is our leverage?”</em> is the central question of organizing. We, as astronomy graduate students in a university, are <em>workers</em> in addition to students and scientists-in-training. We teach classes, which educates the students who are paying tuition to the university; we do research, which generates grant money, prestige, and intellectual property for the university; and we often do unpaid administrative labor that keeps our departments running.</p><p id="27c3ae34-af4d-800e-8597-e68d90bbc33b" class="">This is the essence of union organizing: because we are workers, our leverage lies in our labor, and we strategize with our coworkers across the university to win things from our employer (that they will never voluntarily give us) by acting as a collective instead of individuals.</p><p id="27c3ae34-af4d-80ad-9698-c97a371f9df8" class="">Here’s a brief <a href="https://docs.google.com/document/d/1pthL-02eA4K0RO5aLouy80LsansGmpuAAyHWaKWG5m4/edit#heading=h.5ti83irwojfj">intro to union organizing</a>, developed by UAW 4811 members at our campus, which describes our union’s organizing philosophy and structure of collective decision-making.</p><p id="27c3ae34-af4d-80ec-8fcd-ee30fe591581" class="">As academic workers in the UC system, we are eligible to become members of UAW 4811, a local union of the larger United Automobile, Aerospace and Agricultural Implement Workers of America (<a href="https://uaw.org/about/">UAW</a>) — an international union with over 400,000 active members in almost all aspects of the economy. UAW 4811 covers ~48,000 workers at all 10 UC campuses as well as Lawrence Berkeley National Lab (LBNL). With such a big union comes both challenges and benefits.</p><p id="29a3ae34-af4d-809d-b963-dafc9936d67c" class="">
+</p></div><div id="29a3ae34-af4d-8087-8e19-e43fb3f0a7ae" style="width:50%" class="column"><figure id="29a3ae34-af4d-8062-b6e4-c871a8006c81" class="image"><a href="When%20we%20organize,%20we%20win/Screenshot_2025-10-28_at_15.30.30.png"><img style="width:709.9609375px" src="When%20we%20organize,%20we%20win/Screenshot_2025-10-28_at_15.30.30.png"/></a></figure></div></div><p id="27c3ae34-af4d-8094-a0f1-c0454237817d" class="">The main point of tension within our union is that UC Santa Cruz has historically had different priorities and higher strike willingness when compared to union members at other UC campuses. We are sometimes called “UC’s most striking campus!” There are many instances of this, including Cost of Living Adjustment (COLA), our current contract, and our preparedness to strike in 2024. In 2022, UCSC UAW members pushed for a COLA higher than what the UC was willing to offer, as we have been living in the worst rental market in the country for 3 years in a row. However, being one of the <a href="https://regents.universityofcalifornia.edu/regmeet/nov23/a3attach1.pdf">smallest</a> graduate campuses (ahead of only UC Merced), our voting block represents a small fraction of all UAW 4811 members; as such, the issues that are most important on our campus may not be passed if they are not as important to the workers at larger UC campuses, like UC Berkeley and UCLA. For the 2022 contract, ~60% of workers throughout UAW 4811 voted to accept the contract, but that fraction was less than 20% at UCSC [<a href="https://lookout.co/uc-grad-student-strike-one-year-later-ucsc-workers-still-pressing-for-better-deal/story">citation</a>], because the financial offer of the contract was insufficient for living in Santa Cruz. This was reflected again in 2024, when the UC offered a tentative agreement (TA) to extend the expiration date of our contract from May 31, 2025 to December 31, 2025. Along with this, they offered a 4% raise (which amounts to a 1.4% raise when accounting for inflation) in October 2025 and up to one quarter/semester of transitional funding for 6 graduate students per year capped at 2 per quarter/semester. This came with tiered caps on available funding at &lt;$35,000 per year for UCR, UCM, UCSF, UCSB, UCSC, LBNL and &lt;$70,000 per year for UCLA, UCSD, UCB, UCI, UCD. Again, the smaller campuses, including UCSC, were being offered less money than UC Berkeley and UCLA, which have more voting power. For a deeper breakdown of the drawbacks of this contract extension, see this <a href="https://docs.google.com/document/d/1NcbD1KMiDLHBAkuCZemAs_voLRXwxrdQ03AEQsL-A-I/edit?tab=t.0">toolkit</a> made by UCSC UAW members on the details of the tentative agreement. This vote happened in December of 2024, and <mark class="highlight-red">___% </mark>of the workers in our union voted to ratify the contract extension, again compared to only <mark class="highlight-red">__%</mark> on our campus.</p><p id="27c3ae34-af4d-8004-8edd-e0d97a42e8c0" class="">However, being in UAW comes with access to resources such as union lawyers, distributing our power throughout the state, and the power of the name and established nature of the union. Union workers generally have higher wages. The figure below shows how our wages drastically increased after forming a union and going on strike, even without the COLA that UCSC was aiming for.</p><p id="27c3ae34-af4d-8034-8653-f41aa9a27ff1" class="">Our union is run by workers and for workers. Everyone is empowered to organize around campaigns they care about, whether they’re “bread and butter” workplace issues (like wages, harassment protections, etc.) or “political” issues with demands rooted in the workplace (like our Spring 2024 strike for Palestine, which included demands of amnesty and free speech for all arrestees, disclosure and divestment from Israel and arms manufacturers; and centralized transitional funding to financially enable grad researchers to pivot away from militarized projects – this last demand originated in Astronomy department organizing!).</p><hr id="29a3ae34-af4d-80a3-9b5d-c11ca618a34f"/><h1 id="27c3ae34-af4d-8089-9861-fb9aab4ef280" class="">Ways to plug into organizing efforts</h1><p id="29a3ae34-af4d-80d4-a81d-fc6396a43859" class="">There are three primary levels of organizing that you can plug into. The most local level is organizing within our department. Next, you can organize at the campus level by participating in the stewards network. Lastly, at a nationwide level, you can connect with other UAW academic workers on other campuses.</p><p id="29a3ae34-af4d-80ce-b987-dd934fd6aa38" class="">Department-level organizing is the core of a strong union. The union fights for issues that workers care about, which requires departments to collectively organize amongst ourselves. In our department, we hold bi-weekly organizing meetings where we brainstorm ways to make our department and campus better, and plan how to act towards these goals. If you want to get involved, reach out to any of our department stewards!</p><p id="29a3ae34-af4d-80bc-9f5d-c9c3534a67e3" class="">The role of a department steward is to bring department-level organizing into a strong inter-department network. We as workers <em>are</em> the union, and department stewards attend both department-level and campus-level organizing meetings, ensure that broader union information is spread throughout their department, communicate with coworkers about their rights as union members, and more! For more information about what stewards do, see <a href="https://docs.google.com/document/d/1YVzqNCYz3dDfBJG1rMZZxH46DOngQhcaEnkDXD1Gb6o/edit">this document</a>, and reach out if you’re interested in getting involved!</p><p id="29a3ae34-af4d-8073-9643-cfd62b5c097a" class="">Ways to get involved:</p><ul id="29a3ae34-af4d-8001-91b2-ede478ee36ea" class="bulleted-list"><li style="list-style-type:disc">Department level: Bi-weekly organizing meetings with the astro department, becoming a union steward!</li></ul><ul id="29a3ae34-af4d-807e-b8df-e1201c55a696" class="bulleted-list"><li style="list-style-type:disc">Campus level: Weekly organizing committee (OC) meetings, monthly membership meetings (MMM), union happy hours, cross-unit organizing (i.e., organizing with other unions at UCSC, such as those representing staff members, facilities workers, etc.)</li></ul><ul id="29a3ae34-af4d-80a0-a010-fe26ce5f7196" class="bulleted-list"><li style="list-style-type:disc">Nationwide: monthly “long haul” meetings with UAW graduate student workers across the country</li></ul><hr id="29a3ae34-af4d-80fb-86d0-df9bb20c0116"/><h1 id="27c3ae34-af4d-8011-8fd0-d1088df3fd01" class="">Astro 4 Palestine letter + relationship between astronomy and the military</h1><div id="29a3ae34-af4d-8059-b940-f677117b9b97" class="column-list"><div id="29a3ae34-af4d-8086-b300-efa1bf0810cc" style="width:50%" class="column"><p id="29a3ae34-af4d-8033-ae08-e7d9be4c3a23" class="">In the weeks and months after October 7, 2023, it was difficult to continue on with life as normal. Israel’s genocide against Palestine had very clearly accelerated, and the project of ethnically cleansing Gaza was concertedly underway. While Israel’s occupation of Palestine (now in its 77th year) has never been absent from media coverage or the cultural conversation, a livestream of occupation and genocide entered the mainstream in a new way. For many of us, it was extremely difficult to metabolize our grief, and harder still to imagine how we could organize to intervene.</p><p id="29a3ae34-af4d-809a-be8c-f798a44c4e2f" class="">Many organizing groups worked to meet the moment. At a one-day strike for Palestine on November 7th, 2024 organized by Students for Justice in Palestine (SJP), a handful of astro grads met at the picket: what is our relationship as graduate students to Palestine, to the occupation, to Israel, to US imperialism, to militarism in general? What is our relationship as astronomers? What intervention are we positioned to make, and what specific power do we have to back up that intervention? This conversation didn’t end at the picket – it hasn’t ended even now. From that initial conversation, we coalesced an internal astro organizing group and began to strategize more deliberately.</p><p id="29a3ae34-af4d-8094-90ad-f27434d8865f" class="">In parallel to this department-level conversation, a working group of people across multiple departments were working on their own intervention: mapping funding from the Department of Defense (DoD) into research labs at UCSC, and organizing those workers to prevent their research labor from benefiting military technologies. We found that academic researchers are at the very beginning of the military supply chain along two fronts:</p><p id="29a3ae34-af4d-80c8-a163-fa1b9428391a" class=""><strong>Research</strong>: DoD-funded research is often folded into the vast and complicated ecosystem of military technology development. This incorporation can be direct (e.g. a grad worker obtains a patent for an algorithm they develop. The UC has ownership of all intellectual property developed by their employees, and can license their patent to whoever (the inventor has no control or veto power over licensing)). It can also happen indirectly through published research. However, the DoD throws lots of money at basic research in the hopes that something weaponizable emerges; not all military-funded science ends up in a bomb. For example, the Beltran lab at UCSC – which studies elephant seal behavior – is heavily funded by the Navy.</p><p id="29a3ae34-af4d-8081-b331-d99f398eb071" class=""><strong>People</strong>: graduate workers are highly skilled, highly specialized, and low-wage workers. Our cheap labor while we are embedded in universities is extremely valuable. Once we graduate with our PhDs, we are often recruited to work directly in military labs and institutes – and DoD funding is one way to cultivate workers who are professionally loyal and amenable to the military.</p><p id="29a3ae34-af4d-805a-b0dc-d4add855c96f" class="">From these examples, we see that the connective tissue between academic researchers and military technologies is funding. In FY22, the DoD spent <a href="https://ncses.nsf.gov/surveys/higher-education-research-development/2022#data">$8 billion</a> on university research (not weapons research - university research!). UC received $333 million in research funding in FY23, and our campus UC Santa Cruz received $12.6 million. These numbers are always going up – our campus advertises a 20% increase in DoD funding on the front splash page of their research website. This working group was able to identify 18 labs at UCSC with active DoD contracts, and 10 more than had recently expired DoD contracts, but in the following months it has become extraordinarily clear that this mapping was opaque. The obfuscation between the researchers, workers themselves and the militarized uses of their research is not a natural phenomenon – it is something the military and the university works hard to achieve, since workers who feel alienated and morally detached from the outcomes of their work will not object to the misuse of their intellectual property.</p></div><div id="29a3ae34-af4d-807b-9e9a-c71074e5841c" style="width:50%" class="column"><p id="29a3ae34-af4d-80ab-b149-d0e937d000a2" class="">As this organizing work was churning in STEM departments at UCSC, the astro organizing group focused our intervention in a similar direction. We decided to write a collective letter, because we thought it was important to articulate the specific connections between astronomy and militarism. The letter had to contain concrete commitments: we were not comfortable simply writing a solidarity letter, and felt that that action would be symbolic and insubstantial. We decided to focus our commitments around our labor, because this is our only source of power and leverage over our department, our institution, and our field as a whole</p><p id="29a3ae34-af4d-801a-bfda-ce0a899922cc" class="">You can read the letter <a href="https://scienceforthepeople.org/2024/01/17/ucsc-astronomy-rejects-researchers-complicity-with-the-genocide-of-palestine/">here</a>!</p><p id="29a3ae34-af4d-805c-99f1-eb8b17121aaa" class="">It is worth explicitly saying that writing, signing, and publishing this labor refusal letter is step zero in organizing our department for Palestine and against militarism. Our signatures are a promise of sustained and disciplined commitment to starve the US war machine of our expertise and labor, which involves a lifetime of thoughtfulness, collective deliberation, and solidarity. Our signatures also contain the understanding that the professional sacrifices we may make – turning down tempting paychecks at private arms companies, refusing professional collaborations with military labs – are thoughtfully and deliberately made in service of a free Palestine and a world without militarism.</p><p id="29a3ae34-af4d-80ff-912e-da30c531d9d0" class="">What is the next step in organizing at the department level for Palestine? Well, you can help imagine this strategy. One vector that emerged from the process of writing this letter has been negotiating with our department to win the two department-level demands we made in our letter:</p><ol type="1" id="29a3ae34-af4d-8078-8224-efb53fe67145" class="numbered-list" start="1"><li><strong>Funding transparency</strong>: currently, grad students only know the source of their funding when their advisor chooses to disclose it. Many advisors do so when asked, but we decided that step zero of organizing around the implications of funding sources would be a stable, accessible mechanism for funding transparency at the department level.</li></ol><ol type="1" id="29a3ae34-af4d-80d5-b96a-c0ed4262d41c" class="numbered-list" start="2"><li><strong>Transitional funding</strong>: our job stability – and by extension, financial well-being – is tied to our funding. In the situation where a grad is being paid by a project they have compunctions with and would like to move away from – in benign cases like changing interests, or in morally injurious cases like militarized research – the reality of academic funding financially chains them to the problematic project. A pot of money made available to grads looking to transition between projects would solve this problem.</li></ol><p id="29a3ae34-af4d-809d-9500-e0dfe0493048" class="">The intradepartmental committee (referenced above) was formed, in part, as an opportunity to bargain for these demands with a representative body of our department leadership. We took inspiration from a similar committee within the Physics department. Early conversations on this committee surrounding funding transparency went well - both administrators and faculty seemed open to establishing consistent pathways for students and researchers to fully understand their funding sources, at the time of being offered an appointment. However, that work is not yet complete!</p><p id="29a3ae34-af4d-8063-adb5-e7acee2ed37b" class="">
+</p></div></div><hr id="29a3ae34-af4d-8062-b458-f8562b127004"/><hr id="29a3ae34-af4d-8093-b1ba-e730d7fec6a6"/><p id="29a3ae34-af4d-80c5-b492-ca7e6ea79622" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,713 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Controversies in Astronomy</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="27c3ae34-af4d-80ed-be02-c361105d4ac0" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">💥</span></div><h1 class="page-title">Controversies in Astronomy</h1><p class="page-description"></p></header><div class="page-body"><div id="29a3ae34-af4d-80c7-bc15-e56cd1adc168" class="column-list"><div id="29a3ae34-af4d-8088-8137-dd69ea62d918" style="width:50%" class="column"><h1 id="27c3ae34-af4d-80cb-a7d5-dee628a29dd5" class="">TMT and UC</h1></div><div id="29a3ae34-af4d-807f-b2ea-d0af5cde058a" style="width:50%" class="column"><h1 id="27c3ae34-af4d-8049-9b4f-c6bf6fde2653" class="">Marcy Story (TW: sexual harassment)</h1></div></div><div id="29a3ae34-af4d-804d-a88a-ce29b15ad105" class="column-list"><div id="29a3ae34-af4d-8066-a4ba-f9d3ca2a8136" style="width:50%" class="column"><p id="27c3ae34-af4d-809a-97d2-cce625e9139d" class="">The Thirty Meter Telescope (TMT) is a project proposed to be built on Mauna Kea, a sacred mountain to Kānaka Maoli (Native Hawaiian people). The usual justification for needing the telescope to be built on Mauna Kea is that the conditions for astronomy on top of Mauna Kea are excellent, and building TMT on another site would result in subpar science. However, it is important to understand that building TMT on another site would, in the vast majority of cases, not limit <em>what </em>science can be done, just the <em>rate </em>at which science can be done. In other words, it all comes back to money! To make this quantitative, check out <a href="https://www.tmt.org/download/Document/4/original">this 2021 “alternative site study</a>,” which concludes that building TMT on La Palma (one proposed alternative site in the Canary Islands) would result in (on average) 16-19% more observing time.</p><p id="27c3ae34-af4d-80be-8426-e79b3b780f2b" class="">The UC system, along with the California Institute of Technology, the National Institutes of Natural Sciences of Japan, the Department of Science and Technology of India, and the National Research Council of Canada are all partners in TMT, meaning that they have invested money in the project and would receive privileged access to telescopes and data if it is built. This would function similarly to the UC’s present-day partnership with the Keck Observatories (also on Mauna Kea). Because UC Observatories, the organization that governs all the UC system’s telescope partnerships, is headquartered at UCSC, many TMT decisions are made here. ⅔ of the <a href="https://www.tmt.org/page/governance">UC Board Members of TMT</a>, Bruce Macintosh and Mike Bolte, are at UCSC.</p><p id="27c3ae34-af4d-80bf-9a24-ca467d63f4b7" class="">TMT is one of three planned extremely large telescopes (ELTs; defined as telescopes with primary apertures &gt;20m); the other two are the Giant Magellan Telescope (which has its own controversy around its name; see <a href="https://www.space.com/astronomers-rename-magellanic-clouds-coalition">here</a>), which many US institutions are also partners of, and the Extremely Large Telescope, which is a primarily European project. The original idea for ELTs began at UCSC + Caltech.</p><p id="27c3ae34-af4d-80ed-a0be-e642961017cd" class=""><a href="https://www.youtube.com/watch?v=vaqlF4AnVts">Here is a short (4 min) video</a> introducing the history of Mauna Kea, briefly describing its importance in Kānaka culture, and interviewing Dr. M. Noe Noe Wong-Wilson, and <a href="https://chanda.substack.com/p/astronomy-and-colonial-poison-in">here is a great article</a> by Chanda Prescod-Weinstein discussing the intersections of science and colonialism in the desire to build TMT on Mauna Kea at all costs. As early as 1964, there has been opposition to the building of observatories on Mauna Kea, but protests have grown in recent years. TMT was supposed to begin construction in 2015, but the groundbreaking ceremony was halted by protestors. In 2019, arguably the most famous protests began. Hundreds of Kānaka and allies formed a blockage to prevent the telescope from being built for nine months. The US government ultimately sent in the National Guard to arrest dozens of protestors. The protests (and construction) were ultimately both halted by the covid-19 pandemic. UCSC and other UC campuses spun up organizations to support the protests, called the <a href="https://www.instagram.com/ucscmaunakeaprotectors/">Mauna Kea Protectors</a>. They are not quite as active nowadays, but they organized a series of conversations, rallies, art exhibits, and other events in the past.</p><p id="27c3ae34-af4d-80a8-a138-e11ab62fc614" class="">Since the 2019-2020 protests, the <a href="https://dlnr.hawaii.gov/maunakea-authority/board-members/">Mauna Kea Stewardship and Oversight Authority</a> (MKSOA) has been formed, which is essentially the new governing body of Mauna Kea. MKSOA members comprise both astronomers invested (emotionally and/or financially) in Mauna Kea Observatories and Kānaka cultural practitioners who were on the front lines of the protests. From what the MKSOA has communicated to the astronomy community, this governing body is committed to listening to each other and to meeting the needs of Hawaiian people. It is still a new group, however.</p><p id="27c3ae34-af4d-80cc-9701-f42f71d338be" class="">In 2024, executive director of the project Robert Kirshner visited UCSC to give a colloquium, which was generally not received well by grads.</p><p id="27c3ae34-af4d-805b-b188-cbeca29fd762" class="">Ultimately, the TMT controversy is a reflection of science’s long interconnection with colonialism. Colonialism in Hawaii is much broader than astronomy on Mauna Kea, but as astronomers we are nonetheless benefitting from colonial violence by using data collected in Hawaii (and anywhere else that has a colonial history).</p><p id="29a3ae34-af4d-80dd-a980-eb30084dbe46" class="">
+</p></div><div id="29a3ae34-af4d-80d1-b991-eace38014b30" style="width:50%" class="column"><p id="27c3ae34-af4d-801f-93e7-c17f9e04a443" class="">Among the controversies in astronomy are the actions of and continued collaboration with disgraced exoplanet scientist Geoff Marcy. Geoff Marcy is a former professor at UC Berkeley and a founding member of the California Planet Search (CPS), a collaboration among astronomers in California using the Keck Planet Finder (KPF) and the HIRES spectrograph. While working in this position, it was an open secret within the community that Marcy was a problem. In fact, between 1995 and 2010, at least 7 complaints were lodged against Geoff Marcy (4 at UC Berkeley to the Title IX office between 2001 and 2010, and 3 at San Francisco State between 1995 and 1999). The complaints included allegations of “unwanted massages, kisses, and groping.” For decades, Marcy’s status as a successful exoplanet scientist led SF State, UC Berkeley, and the community as a whole to allow him to continue to conduct research, work as a faculty, and perpetuate harm. UC Berkeley launched an investigation into his actions in 2014 and found that he violated their sexual harassment policy [<a href="https://www.theatlantic.com/science/archive/2015/10/sexual-harassment-geoff-marcy/410089/">citation</a>]. After the investigation Marcy was given, “‘clear expectations concerning his future interactions with students,’ which he must follow or risk ‘sanctions that could include suspension or dismissal.’” On October 7, 2015 Geoff Marcy released an <a href="https://web.archive.org/web/20160310155438/http://w.astro.berkeley.edu/~gmarcy/MarcyLetter_October7.pdf">open letter to the community</a> apologizing for his actions, stating “While I do not agree with each complaint that was made, it is clear that my behavior was unwelcomed by some women. I take full responsibility and hold myself completely accountable for my actions and the impact they had. For that and to the women affected, I sincerely apologize.”</p><p id="27c3ae34-af4d-80ce-a275-d445bd6fa67d" class="">All of this was made public on October 9, 2015, when Buzzfeed released an <a href="https://www.buzzfeednews.com/article/azeenghorayshi/famous-astronomer-allegedly-sexually-harassed-students">article</a> about the incidents and the investigations. Following the press coverage, UC Berkeley faculty released a <a href="https://s3.documentcloud.org/documents/2456355/updated-berkeley-astronomy-statement.pdf">letter</a> on October 12th, 2015, stating: “We believe that Geoff Marcy cannot perform the functions of a faculty member.” He also resigned as the head of Breakthrough Listen - a project based at the UC Berkeley Research Center at UC Berkeley looking for signs for extraterrestrial intelligence - the same day. Two days later, on October 14th, 2015, he <a href="https://www.sfgate.com/education/article/Embattled-astonomer-resigns-from-UC-Berkeley-post-6570702.php">resigned</a> from his position as faculty at UC Berkeley. Since then, Marcy has stopped working with CPS, and in 2021 had his membership to the National Academy of Sciences rescinded.</p><p id="27c3ae34-af4d-8028-9cce-fcd1197190f1" class="">This seems like a natural end to the harm perpetrated by Geoff Marcy. However, in spring of 2023, a paper was put on <a href="https://arxiv.org/abs/2304.00071v2">arXiv</a> that had Geoff Marcy as the 3rd author. This understandably drew backlash from the community, which was made worse by the fact that the early career scientists who took the data necessary to publish the paper were not included in the author list. This paper was a joint effort between CPS and the Kepler Giant Planet Search (KGPS), and many of the authors said they were not aware that Marcy would be an author on the paper, and some withdrew their authorship. This was not the first paper that was published by CPS with Marcy on the author list after 2015, as there have been many other papers published with him on the author list after he ceased work with CPS. However, 2023 appears to have been the breaking point, as the paper was pulled and ultimately re-uploaded without Marcy as an author and including the early career researchers who collected the data. For further information on this, see the <a href="https://astrobites.org/2023/06/25/exoplanets-and-ex-astronomers/">astrobites</a> article published in June of 2023. To this day, Marcy continues to push papers to arXiv, but these articles are largely not in exoplanet science.</p><p id="27c3ae34-af4d-800d-87fc-e1270afeedd3" class="">Although the harm perpetrated by Geoff Marcy happened at different universities, the actions have affected the workers in our department, and continue to have ramifications to this day. Throughout our facilities, there continue to be remnants of his legacy—from being listed on the plaque of the Automated Planet Finder (APF) up at Lick Observatory thanking donors for their contributions, to a picture of APF donors (again including Geoff Marcy) hanging up in the UCO shops on campus. His inclusion can be a disturbing thing to see, especially for those who have been directly harmed by his actions. Additionally, there are ongoing collaborations between our department and the California Planet Search, which includes professors who have worked with and directly collaborated with Geoff Marcy, including as recently as on the paper from 2023. Graduate students who collaborate with CPS are warned of the history of the collaboration, and it is unfortunate that this group—which is otherwise a good way for early career scientists to gain experience with radial velocity observations—is so marred by Geoff Marcy and the people who would continue to work with and support him. This type of harmful behavior is not tolerated in our department. We try to create a welcoming community that everyone feels safe in. That said, if you are experiencing any type of harassment, please reach out to someone you feel safe talking to, but as a note, all faculty and staff are mandatory reporters.</p></div></div><hr id="29a3ae34-af4d-804c-b80b-fc725e5de1fe"/><div id="29a3ae34-af4d-80cb-a05d-d3e144acf2da" class="column-list"><div id="29a3ae34-af4d-80c3-858a-e65b0f991e78" style="width:50%" class="column"><h1 id="27c3ae34-af4d-808f-b6dd-f62ec0010081" class="">Climate impact of astronomy</h1><p id="27c3ae34-af4d-8033-b2ad-ea6014ec93ee" class="">Astronomy is a field where we primarily look up and away from the planet we live on. However, more recently, astronomers are increasingly aware of the impact their science has on the climate and our complicity in the climate crisis. As we are a small field, we have one of the biggest carbon footprint per scientist largely due to the carbon emissions from flights taken to conferences and building large observatories.</p><p id="27c3ae34-af4d-8059-8ee3-c255b6f684a9" class="">The annual carbon footprint of astronomy&#x27;s research infrastructure is equivalent to about 20 million metric tons of carbon dioxide. This is more carbon output than countries like Estonia, Croatia, or Bulgaria!! [<a href="https://www.npr.org/2022/03/21/1087203642/astronomys-contribution-to-climate-change-rivals-the-emissions-from-some-countri">citation</a>] [<a href="https://www.nature.com/articles/s41550-020-1169-1?fromPaywallRec=false">citation</a>] As scientists, we need to be cognizant of our climate footprint to set a standard of trust with the general public. If we don’t take our climate footprint more seriously, then how can we expect others to follow the advice of climate scientists?</p><p id="27c3ae34-af4d-802e-9e5f-c30ab4cdf61b" class="">Turning to renewable energy sources to power our observatories and being open to more virtual conferences are current solutions that astronomers have been experimenting with already!</p><p id="27c3ae34-af4d-806b-b54e-e155373aef2d" class="">As of the creation of this guide, there have been two colloquium talks dedicated to the climate crisis given by professors in our department, Alexie Leauthaud and Sandy Faber. Each took a different tactic when framing the climate crisis and general systemic solutions. The first step is making sure everyone knows the extent of the crisis without sending them into a climate doom spiral. The second step is figuring out radical solutions to solve this problem. (Radical solutions from Sandy Faber include dismantling the neo-capitalism state of our country and economy. Okay marxist queen!)</p><p id="27c3ae34-af4d-80d7-955b-db0451b52f61" class="">We hope there will be more discussions in the future on how our department, in specific, can become more sustainable. There have been talks for forming a sustainability committee within the department, but no action has been taken. Prof. Alexie Leauthaud now uses a significant chunk of her time to focus on agricultural climate solutions within UCSC’s garden project, calling it the other kind of “dark matter” she studies. Feel free to reach out to her if you are interested in her work.</p></div><div id="29a3ae34-af4d-8067-9002-e54b32ecc3f4" style="width:50%" class="column"><p id="29a3ae34-af4d-8064-8ea6-d0eb1a64e384" class="">
+</p><p id="29a3ae34-af4d-808b-a660-c0b3d786379e" class="">
+</p><p id="29a3ae34-af4d-8010-9eb3-e5f273d7bed0" class="">
+</p><figure id="29a3ae34-af4d-80ff-9458-dd1a68fe48ef" class="image"><a href="Controversies%20in%20Astronomy/Screenshot_2025-10-28_at_15.19.28.png"><img style="width:592.4609375px" src="Controversies%20in%20Astronomy/Screenshot_2025-10-28_at_15.19.28.png"/></a></figure></div></div><p id="29a3ae34-af4d-8020-a145-c0ea4aadd0a5" class="">
+</p><div id="29a3ae34-af4d-8099-84df-d6ebf98bbd4b" class="column-list"><div id="29a3ae34-af4d-8088-abce-ff8894cf8d5e" style="width:37.5%" class="column"><figure id="29a3ae34-af4d-80fa-8473-f6add96d0d77" class="image"><a href="Controversies%20in%20Astronomy/Screenshot_2025-10-28_at_15.19.39.png"><img style="width:576px" src="Controversies%20in%20Astronomy/Screenshot_2025-10-28_at_15.19.39.png"/></a></figure></div><div id="29a3ae34-af4d-8040-9036-cc4ca87d48c3" style="width:62.5%" class="column"><p id="27c3ae34-af4d-8071-881d-dd11372bcd4e" class="">As an additional consideration into the conversation of our impact on the climate, the sheer number of satellites currently in orbit — while not strictly used for astronomical research — may have a drastic impact on our climate. As of August 29th, 2025, there were 12,525 active satellites in orbit within our atmosphere [<a href="https://celestrak.org/NORAD/elements/table.php?GROUP=active&amp;FORMAT=tle">Current active satellites</a>], and this number is increasing every day. Within the past 10 years, the number of objects launched into space has started to exponentially increase, with the most drastic uptick starting in 2018. This rapid increase is largely driven by actions within the United States — mainly Starlink, which had its first launch in 2018. Currently, there are 8,188 Starlink satellites in orbit, and they hope to launch a total of ~42,000. </p><p id="27c3ae34-af4d-80c1-869e-dd7d81649ae4" class="">These satellites affect both our astronomy and our climate. Objects in space leave tracks in ground-based observations, and their rapid reentry creates ozone destroying pollutants. The reentry of satellites is so fast that the debris compresses the atmosphere, which leads to the creation of nitrogen oxides. Additionally, both satellites themselves and the rockets that launch them are made up of mostly aluminum, which forms aluminum oxide as it burns up on reentry. Both of these species destroy ozone, and in fact, ~50% of ozone depletion caused by satellites is a direct result of nitrogen oxides. Aluminum oxide is also an incredibly reflective material, which causes the atmosphere to heat up more as light from the sun is bounced around more in the atmosphere. A study led by Connor Barker at University College London has found that there are pathways to which this warming could further lead to ozone depletion. The current levels of aluminum and nitrogen oxides are approaching what is naturally occurring due to natural deposits from meteorites [<a href="https://www.technologyreview.com/2024/12/09/1108076/satellite-reentry-atmospheric-pollution/">citation</a>]. Another study found that aluminum oxide could lead to a rise in the temperature of Earth’s middle atmosphere by roughly 1.5 Celsius near the poles, and could further decrease the speed of the polar vortex in the Southern Hemisphere by about 10%. In 2024, another study led by Daniel Murphy at the National Oceanic and Atmospheric Administration’s Chemical Sciences Laboratory found that the current abundances of lithium, aluminum, copper, and lead are all currently higher in our atmosphere than what we would expect due to meteorites alone. All of this will only continue to get worse, as the Government Accountability Office estimated that there could be greater than 60,000 satellites in low-Earth orbit by 2040.</p><p id="27c3ae34-af4d-803a-ac3f-eabdae4b7b2e" class="">The conversation surrounding satellites like Starlink is controversial because even though they are a large burden on astronomical advancement and have a large climate footprint, they bring internet access to areas of the world that otherwise would not. Finding a solution to this delicate problem is difficult and will need creative minds to experiment.</p><p id="29a3ae34-af4d-803b-9760-cee605aac5c7" class="">
+</p></div></div><hr id="29a3ae34-af4d-80d6-bcdc-c0f3d65c1e2e"/><h1 id="27c3ae34-af4d-8023-9d9f-f64b30e9e946" class="">Artificial Intelligence</h1><div id="29a3ae34-af4d-8011-a33e-c7f4f615f2d7" class="column-list"><div id="29a3ae34-af4d-8081-8d77-fea93aa67265" style="width:50%" class="column"><p id="27c3ae34-af4d-808f-98c6-de4005f38c1c" class="">In pursuit of finding tools to most efficiently and quickly complete research and teach courses, professors within the Astronomy &amp; Astrophysics Department have, to varying degrees, sought the use of artificial intelligence. The application of machine learning (ML) algorithms over the last decade has empowered timely exploration of large, complex datasets, enabling the explosion of many subfields within astronomy including time-domain research, strong gravitational lensing, and gravitational wave detection. We discuss here the application of AI in astronomy research and in the classroom.</p><p id="27c3ae34-af4d-803b-adbb-db4a8ecd90a6" class="">With the explosion of popularity of generative AI (Gen-AI) models in everyday use, it is our responsibility as scientists to know when the use of AI is appropriate or not. The demarcation between AI and ML as tools is very murky. ML is a conglomerate of different methods and algorithms which “learns” from some input training data without being programmatically designed for this data set, which can then produce some meaningful output with new inputs. At the end of the day, ML is all about generally approximating multi-dimensional, non-linear functions. While a simple example of this tool could be recognition of certain numbers and letters, a more complex application would be facial recognition software. As with any software built by humans, bias could leak into the program to unintentionally develop a discriminatory project. For example, facial recognition software works best when applied onto white people while misidentifying Black people [<a href="https://www.youtube.com/watch?v=jZjmlJPJgug">citation</a>]. Building facial recognition software in the first place is an ethical dilemma that is beyond the scope of this guide.  An astronomical application of recognition software may be the morphological classification of galaxies, which can be leveraged to learn about galaxy formation over cosmic timescales [<a href="https://academic.oup.com/mnras/article/537/2/876/7954755">citation</a>]. These tasks are less complex, but are still time-intensive for humans to complete at-scale. Taking great care during the development and training of ML methods is important to create effective programs. Importantly, the underlying scientific principle of result reproducibility necessitates resiliency in ML projects.</p><p id="27c3ae34-af4d-80c4-bd7f-c10bc66a6453" class="">The rise of Gen-AI over the last couple years, while being rooted in similar neural network technology as popular ML algorithms, mostly tracks with the rise of transformer technology and its application to large language models (LLMs) and image/video generation. Gen-AI is generally trained to create programs with “fill in the blank” applications of neural networks. Very similar to how GMail or Google Docs may predict the next word you may want to type, Gen-AI is constantly trying to predict the next word in a sentence it is creating. Most AI models are trained on data from the internet and books, largely acquired without the consent of the authors of these materials (AI company Anthropic recently agreed to pay a $1.5 billion settlement to authors whose work was taken to train their chatbot Claude [<a href="https://www.npr.org/2025/09/05/nx-s1-5529404/anthropic-settlement-authors-copyright-ai">citation</a>]). They are therefore quite strong in writing complete (mostly English) sentences. For a non-native English speaker who struggles to confidently describe their work, a Gen-AI model may bolster their vocabulary to a stronger final presentation. However, just as humans can write confidently incorrectly, AI models don’t generally have a good way to diagnose their own uncertainty. Further, the application of AI, when compared to the amount of training data, may be exhausting lots of resources when a different tool may be better suited, like a 100-order polynomial fit to 101 data points is an example of overfitting.</p></div><div id="29a3ae34-af4d-8018-9c74-e3a5c907e867" style="width:50%" class="column"><p id="27c3ae34-af4d-8094-b21e-f510024769da" class=""><strong>GEN-AI in the Classroom:</strong> Simply explaining that a tool is flawed to students in the classroom will not dissuade them from using ChatGPT. Generally, students use AI in a similar way to undergraduate students from the past decade have used Chegg – a last ditch solution. Some students use Gen-AI tools as primary resources in cases where they are not appropriate (e.g. fact checking and calculations where more reliable resources exist). Other students feel backed into a corner, not wanting to use AI, but may feel forced into it in order to keep up with their peers. The advertisement of many AI chatbots have taken advantage of this educational perspective, marketing tools as a personalized tutor for everybody. Over the last decade, many other internet resources (YouTube channels, Khan Academy) have provided a similar educational value to learn from multiple perspectives apart from just the teacher/professor. Students need to be aware that Gen-AI models, just like YouTube videos and other internet resources, are fallible and have limitations. The prospects of being fed false information are particularly scary with Gen-AI because of its lack of uncertainty and inability to make reproducible results. At the end of the day, students ascribe their name to a homework assignment when it is submitted, and need to stand on their own work. The role of us as educators should be to encourage students to problem solve with a growth mindset, while highlighting their ability to do hard things. Even as graduate students, being a bit dumb and learning is part of the job. Professors who are teaching large sets (sometimes over 200) of undergraduate students either fully embraced Gen-AI (both in planning the logistics of a class and encouraging its use) or limit its potential use by primarily assessing students in-person.</p><p id="27c3ae34-af4d-80de-91bd-e016309e8754" class=""><strong>GEN-AI in Research</strong>: The application of Gen-AI towards research development is quite limited. The lack of uncertainty reinforces Gen-AI to provide lots of affirmation and confirmation to a user, which may not be real. Users may find that a Gen-AI tool is “confidently wrong”, claiming it is able to solve a problem while actually making significant mistakes. Throwing difficult problems which require reasoning and problem solving can highlight its limitations. Furthermore, the steps taken in solving a problem need to be cross-checked for any potential logical missteps. Recently, the development of code-assistants, like Github Copilot, has expanded the ways that astronomy researchers can build their codebases. While the way that code is written may change, researchers are still required to understand how computers work, similar to computer science classes, to guarantee result reproducibility. The primary improvement in research is the process of paper writing, which is still quite limited. An AI could correct the structure of a sentence in English and catch grammar checking. These are particularly useful for non-Native English learners. However, information-dense sections of a paper, like a Methods or Results section, is usually carefully constructed with sentences in a specific order. Furthermore, an AI is not able to provide an accurate literature review. Any topical assessment of papers is not well captured by an AI, and needs to be cross-checked to actually be real. Be aware of the policies laid out by journals you want to publish in; they may have new rules about declaring how and where you used Gen-AI to create text. It is also important to disclose that information to your co-authors as well.</p><p id="27c3ae34-af4d-80b1-aab5-e4f06eb308b6" class="">Lastly, we note that the energy requirements to train and inference from AI models to use them are not negligible. Astronomy research involves large usage of general computing on personal computers and supercomputers; the contribution of AI to the overall astronomer impact on the climate budget is therefore still uncertain as it adds onto the existing large burden from “traditional” computing. However, there is substantial evidence that the current expansion of physical infrastructure for AI is causing adverse environmental impacts: in one case, a new data center built by Meta diverted fresh water from residents in the area [<a href="https://www.nytimes.com/2025/07/14/technology/meta-data-center-water.html">citation</a>]. At the same time, the large usage of general computing on a personal computer and allotment of resources on supercomputers creates a blurry picture to paint AI as the largest consumer of energy over many orders of magnitude.</p><p id="27c3ae34-af4d-8029-8ea4-e13c8c4afaa6" class="">The best way to navigate the future of astronomy research and learning with Gen-AI is to lead inclusionary spaces and have discussions with others. Uplift others ability to learn and encourage problem solving with a growth mindset. Stigmatizing others for using Gen-AI will not make the tool go away, but highlighting its limitations and use cases could create an innovative, safe environment where everybody is encouraged to ask dumb questions.</p><p id="27c3ae34-af4d-802b-98fa-f2ea3bdfc977" class="">TLDR: Generative AI models, machine learning, and neural networks are all foundationally built on linear algebra sequences and are probability estimators. When you ask a calculator, “what is 4+3?” it answers, “that equals 7,” whereas an LLM’s answer is, “that’s most probably 7.” We must encourage people to understand the technology they are using both in the classroom and in their research, both on a personal level and its global effects in order to navigate this new era.</p></div></div><hr id="27c3ae34-af4d-80e3-ab67-db58e538306f"/><hr id="29a3ae34-af4d-8079-ac14-d6b0e6972902"/><p id="29a3ae34-af4d-803a-9eb5-fbb928d2b06b" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

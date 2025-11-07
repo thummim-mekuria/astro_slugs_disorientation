@@ -1,0 +1,708 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Strike history + astro involvement</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2763ae34-af4d-80aa-ad98-cd1c5cd8b878" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🌟</span></div><h1 class="page-title">Strike history + astro involvement</h1><p class="page-description"></p></header><div class="page-body"><div id="29a3ae34-af4d-800d-83ff-cbd0b4448dd4" class="column-list"><div id="29a3ae34-af4d-80b4-a3c1-cf1e5e7fa13d" style="width:50%" class="column"><p id="29a3ae34-af4d-807f-8a77-d51784f5584d" class="">A brief summary of our union formation:</p><ul id="29a3ae34-af4d-809e-af95-f6e3f2a6a56e" class="bulleted-list"><li style="list-style-type:disc">In 2000, Graduate student TAs agreed to their first contract with the UC, unionizing with UAW local 2865. This was after decades of fighting for better working conditions and labor rights.</li></ul><ul id="29a3ae34-af4d-8054-b075-d8b4afc989fb" class="bulleted-list"><li style="list-style-type:disc">In 2010, Postdocs unionized to form UAW 5810, becoming the first union for postdocs in the country.</li></ul><ul id="29a3ae34-af4d-8099-9047-c0bf73f69b39" class="bulleted-list"><li style="list-style-type:disc">In 2022, 17,000 student researchers joined UAW 2865 and we voted to merge with UAW 5810 to become UAW4811!</li></ul><p id="29a3ae34-af4d-804f-be97-d3f01711fcb3" class="">What are the different types of strikes? The three main strikes our campus has participated in since 2019 are a Wildcat strike, a contract expiration strike, and an Unfair Labor Practice (ULP) strike.</p><p id="29a3ae34-af4d-8039-bd75-f3214d518409" class=""><strong>A Wildcat strike</strong> is a non-union sanctioned strike, meaning we strike independently from the union and therefore do not have the same protections from the UC or as much support from the faculty.</p><p id="29a3ae34-af4d-8071-9de5-f9b11568e04b" class=""><strong>A contract expiration strike</strong> happens when our union contract expires with the university and if the union team and the university cannot reach an agreement for the next contract, we strike until they meet our demands. This is a union-sanctioned strike, so we get all the protections from the Union (union lawyers, strike pay, etc) and there is generally more support from the faculty.</p><p id="29a3ae34-af4d-8093-9930-e37f3507ffa4" class=""><strong>A ULP strike</strong> happens before the end of our contract when the university breaks our contract first due to an unfair labor practice (see the 2024 strike) and therefore we are no longer under obligation to respect the “no-strike” clause in the contract and can lawfully go on strike. This type of strike garners more support from faculty than a wildcat strike, but can still be viewed negatively because the university will push a lot of anti-striking rhetoric or the false narrative that it is an unlawful strike.</p><p id="29a3ae34-af4d-800f-bb4c-eb5accfaa41b" class="">Below we outline the timeline of major milestones for our Union and strike history. Here, we build a collective memory to serve as a resource for future strikes and learn from the lessons of the past.</p><p id="29a3ae34-af4d-809c-9525-f46acb91d593" class="">Below is a history of our 3 most recent strikes centered on our perspective as workers in the Astronomy and Astrophysics department. Through each strike we will give a (1) brief background and summary, (2) how our students+postdocs in our department specifically were involved, (3) how the faculty responded to our actions, and (4) the organizing takeaways and consequences of each strike.</p><h1 id="29a3ae34-af4d-8052-8702-c014ff0b2520" class=""><strong>1. 2019-2020 Cost of Living Adjustment (COLA) Wildcat Strike</strong></h1><p id="29a3ae34-af4d-8022-bacd-e9c25e1d3c9c" class=""><strong>Background:</strong> First serious labor action in institutional memory at UCSC, as previous actions have exited our collective experience/consciousness (as of 2025). As many of the workers who wildcatted graduate or move on from UCSC (𝝉PHD ⪅ 6 years!), it’s important that we internalize lessons from this strike and prevent our collective organizing experience from resetting again.</p><p id="29a3ae34-af4d-80c8-b890-c86354a7fb01" class="">As students were organizing around a “cost of living adjustment” of $1,412/month to end rent burden, a disastrously offensive email thread from then-Executive Vice Chancellor Lori Kletzer fueled appetite for a wildcat strike at UCSC. At the end of the Fall 2019 quarter, graduate student instructors and teaching assistants engaged in a &quot;grading strike&quot; by refusing to submit over 12,000 fall-quarter grades for undergraduate students. This amounted to roughly 20% of all UCSC grades not being received by the December 18 deadline.<a href="https://en.wikipedia.org/wiki/2020_Santa_Cruz_graduate_students&#x27;_strike#cite_note-Sentinel-2-5">[5]</a> As the UCSC wildcat played out, growing momentum seemed to be going in the direction of a UC-wide sanctioned strike, as the statewide bargaining team moved to file a ULP-charge and call a union-sanctioned strike.</p><p id="29a3ae34-af4d-8094-94a4-c27f2d725fdf" class="">As of February 2020, at least 17 protesters were arrested.<a href="https://en.wikipedia.org/wiki/2020_Santa_Cruz_graduate_students&#x27;_strike#cite_note-16">[16]</a> On February 28, 2020, more than 82 graduate students were terminated of employment for participating in the strike,<a href="https://en.wikipedia.org/wiki/2020_Santa_Cruz_graduate_students&#x27;_strike#cite_note-17">[17]</a><a href="https://en.wikipedia.org/wiki/2020_Santa_Cruz_graduate_students&#x27;_strike#cite_note-18">[18]</a> causing them to lose their health insurance during the<a href="https://en.wikipedia.org/wiki/COVID-19_pandemic_in_the_United_States"> COVID-19 pandemic</a>.<a href="https://en.wikipedia.org/wiki/2020_Santa_Cruz_graduate_students&#x27;_strike#cite_note-19">[19]</a> As a part of negotiations following the unfair labor practice vote, the UC system reinstated these workers&#x27; health insurance.<a href="https://en.wikipedia.org/wiki/2020_Santa_Cruz_graduate_students&#x27;_strike#cite_note-covid19-13">[13]</a></p><p id="29a3ae34-af4d-8020-8fec-f363b2e1f5cc" class="">COVID halted much of the momentum of the strike, as most students went remote. Evacuations from severe fires in August 2020 also took up the bandwidth of many who were still present in Santa Cruz. However, grade withholding still continued, with more than 500 graduate students across 22 departments also pledging not to take teaching assistant positions made vacant by the firing of student strikers.<a href="https://en.wikipedia.org/wiki/2020_Santa_Cruz_graduate_students&#x27;_strike#cite_note-movement-gains-15">[15]</a></p><p id="29a3ae34-af4d-80a6-b9bf-db7c89ec438d" class="">Ultimately, the strike won a housing stipend and 5-year funding guarantee. A feature of labor actions that is not obvious until you experience them is how hard admin works to obscure the causal connection between your labor action and their concessions. Admin never announced the 5-year funding guarantee and $2500/year housing stipend as responses to the wildcat, but they would have never been offered without the damage that grade withholding during the wildcat caused. All 82 workers won their jobs back after a long anti-retaliation campaign.</p><p id="29a3ae34-af4d-80eb-be32-ebf28c9350f9" class=""><strong>Astro Involvement:</strong> Involvement in our department was driven mostly by a modest (compared to now!) number of highly engaged members of the department. Several members of the department had high presence at picket lines and actions, and were directly harmed by retaliation and violent police response from the university (individuals had arms broken, and were arrested). These organizers took a very aggressively anti-scab (i.e. with us or against us) approach to the action, which had its pros and cons with respect to department organizing. This strike is the first point from which organizing in the department today has collective memory.</p><p id="29a3ae34-af4d-8036-9c0e-ca87f0cac9af" class=""><strong>Faculty Response</strong>: The arguably biggest impact of this strike on our department organizing today is that it was the first exposure to collective students actions that many of the faculty experienced (several were hired between 2015-2018). Several faculty responded to the strike extremely negatively, whether because they disagreed with the demands, or because it was not union-sanctioned. Individual faculty were noted to have threatened students with academic retaliation for participating in the strike (although, no disciplinary actions were ever taken by the department), and one faculty member explicitly shared the sentiment of (paraphrase) “you are trainees, not workers, you shouldn&#x27;t get paid at all, and it is bad that you’re going on strike to demand even more.”</p><p id="29a3ae34-af4d-804e-a032-c78f4379641e" class="">While this initially sounds negative, a huge part of organizing is “conditioning the boss”, wherein via repeated discussions and exposure to labor actions, the faculty’s individual and collective capacities to metabolize and constructively engage in these actions grows. Through our future actions, we have seen material improvement in the faculty’s ability to discuss these issues, and to this day no worker in the Astronomy department has faced retaliation from a faculty member.</p><p id="29a3ae34-af4d-80bb-b2bc-dc063d82be82" class=""><strong>Consequences and Lessons</strong>: The wildcat strike set the culture of the department as a workplace, but did not yet generate operational takeaways about department organizing. Organizers at the time took a hardline stance about department organizing: animosity, confrontational. Organizing is strong when it is centered around collective decision making; since the wildcat, we have learned the lesson of never shutting the door on people, and instead organizing for the long haul.</p><p id="29a3ae34-af4d-80f8-b860-df51abba1150" class="">The wildcat created fractures in the culture of the department that created a different terrain for subsequent labor actions in the department – in some ways harder, in some ways easier. These organizers set the foundation for astro striking as we know it now, and did the first “conditioning” of the faculty to a student labor action. This taught all units that they had to pay attention to organizing movements (it’s their problem, and a real and impactful one whether they support it or not).</p><h1 id="29a3ae34-af4d-8077-a348-e76eb6b3bffc" class=""><strong>2. 2022 Contract Strike</strong></h1><p id="29a3ae34-af4d-8001-91f8-eebdc24f432e" class=""><strong>Background: </strong>In XXX 2022, our union entered contract bargaining with the university with a core demand of a Cost of Living Adjustment -- specifically aiming for a $54k annual salary for all grad workers UC-wide.</p><p id="29a3ae34-af4d-80b3-a55c-da81cd349a13" class="">The university failed to negotiate in good faith, and workers at all 10 UC campuses went on strike following the culmination of the current contract. The strike was <strong>“open-ended”</strong>, meaning it would continue until an agreement was reached between the university and the union. Workers planned to withhold grades past the end of the Fall quarter, and come back still on strike in Spring.</p><p id="29a3ae34-af4d-808d-a26e-f15e28096dff" class="">Ultimately, the strike went on for a total of 6 weeks, with the university only bringing serious offers to the table starting around week 4. In December, our bargaining team reached a tentative agreement (TA) with the UC and released the agreed upon contract for membership to vote to ratify. Systemwide, workers voted to accept the TA with an ~80% approval rate. However, at UCSC specifically, a strong majority of workers voted to deny the TA for several reasons., Chief among them were 1) the analysis of strike power that we had developed at UCSC, and 2) the strength of the strike at different campuses, and 3) the TA did not successfully lift workers out of rent burden in the system-worst housing market of Santa Cruz. Furthermore, the TA included benefits specific to the “prestigious campuses” of UCLA, UC Berkeley, and UCSF that were not shared to other campuses.</p><p id="29a3ae34-af4d-8044-98dd-df6868953cd5" class=""><strong>Astronomy Involvement:</strong> Generally, the graduate workers in our department were hugely positive towards the strike, and would frequently have 10+ workers present at the picket line daily (particularly during our “picket shifts”). A large signal chat was used to communicate amongst plugged in workers, and most workers were receptive to discussions and walkthroughs trying to turn out for both the strike authorization vote, and strike itself (the risk was felt to be notably lower than the wildcat strike). During non-strike times, while all workers are welcome and encouraged to go to union meetings, the astro department has habitually identified 1-2 union reps to attend union meetings and report back. During the strike, we pushed to have more people go to union meetings, both to get the department plugged into the campus strike picture, and to report out how the strike was going within the department. This strike was a huge boon to our sense of community, and brought together many younger and older students in a post-COVID department.</p><p id="29a3ae34-af4d-80c9-a524-ed4705bb287b" class=""><strong>Faculty Response: </strong>The strike was generally received positively among faculty, with a small number even coming down to visit the picket line. Several department events (i.e. colloquium) werewas restructured such that the speaker would also visit the picket line. While some faculty still likely had some opposed feelings, they ultimately recognized the graduate students were acting as a collective, and acknowledged the “by-the-rules” validity of a union strike. Throughout the strike, we did not find any explicit retaliation from the faculty.</p><p id="29a3ae34-af4d-8053-81fd-c8470779962b" class=""><strong>Consequences and Lessons:</strong> Meetings during the picket set the foundation for graduate students beyond just stewards to engage in our union. Department-level organizing for us has become increasingly effective as it spreads into our collective, rather than having a small number of stewards control things. Furthermore, this strike marked the first time that workers in the department came together and concretized what a labor action looks like in the department, and how we as a GSR-dominated department can wield the most leverage. One concept that we had not yet embraced was “power-mapping”, or the explicit itemization of what workers in each of their positions can leverage in a labor action (i.e. who is TAing for which class, and what grades can be withheld).</p><p id="29a3ae34-af4d-8071-a73e-f33e5bbcf094" class="">Several students in the department (and campus-wide) were confronted with the conflicting decisions and concessions made by the statewide union in the tentative agreement, giving a better understanding that we need to continue to advocate and organize around our individual needs as a campus. The university also introduced timesheets (leave-reporting forms) following this strike as a form of strike attestation.</p><p id="29a3ae34-af4d-80ea-9d6d-d8f674814224" class="">In spite of this, the department came away from this strike with positive and overall welcoming sentiment.</p></div><div id="29a3ae34-af4d-80d8-96d6-e004f3a88fcb" style="width:50%" class="column"><h1 id="29a3ae34-af4d-8057-b088-d6f1acbf85a7" class=""><strong>3. 2024 Unfair Labor Practice Strike</strong></h1><p id="29a3ae34-af4d-8077-925c-ff002f24a6ca" class=""><strong>Background: </strong>In April 2024, several student-led encampments were initiated nationwide as a response to the ongoing Palestinian genocide. Prior to this, most campus actions in support of Palestine were limited to single-day walkouts and strikes, which we have repeatedly found to be ineffective in leveraging the university administration from the perspective of academic workers.</p><p id="29a3ae34-af4d-80d0-9c4d-ccd1721ea201" class="">As the slaughter continued, campus-wide organizers began to convene around the possibility of a wildcat strike in response to a Palestine General Federation of Trade Unions (PGFTU) call for solidarity general strikes on May Day (May 1) and Nakba Day (May 15). The timelines for campus organizing around these actions occurred in roughly a week. In an emergency town hall, workers in our department voted to tentatively support a wildcat strike, while workers at a campus-wide meeting shortly after voted 50/50 between “wildcat” and “wait and see” (but nearly unanimously to take action). Ultimately, we decided on a 1-day walkout on May Day as an immediate action before reassessing our strike power.</p><p id="29a3ae34-af4d-8080-af90-e920c866b0ba" class="">On the evening of May 1, the encampment at UCLA was attacked by a mob of Zionist counterprotestors and UCPD. Several union members were present and injured at the scene, for which our union filed a ULP and released a strike authorization vote for a sanctioned ULP (not wildcat) strike shortly thereafter. Of 20,000 workers to vote in the strike authorization vote (on an extreme 3-day timeline), 16,000 voted to strike for Palestine.</p><p id="29a3ae34-af4d-80bf-a34f-e2af0f1af896" class="">As the strike began, the statewide union adopted a list of demands that was largely influenced and worked on by efforts in the Astronomy department. Throughout the next 6 weeks, the university would refuse to come to the bargaining table,  repeatedly referred to the strike as illegal due to its political nature, and began a fierce litigation battle with our union. After twice filing for (and being denied) an injunction to the strike, the UC was granted a temporary restraining order (TRO) by a handpicked anti-labor judge infor Orange County to pause the strike effectively until the end of the academic term.</p><p id="29a3ae34-af4d-80db-8702-cb9417a954e3" class="">Campus workers held a vote on whether to defy the TRO and continue striking, but ultimately decided the better strategy was to return to work. While this was defeating in the moment, time revealed our concrete wins and how the UC went to great lengths to obfuscate the concessions from our labor actions. Direct investments in several corporations listed in our demands were pulled, and a transitional funding pilot program was developed at UCLA.</p><p id="29a3ae34-af4d-808f-976c-d835448fa00b" class=""><strong>Astronomy Involvement: </strong>Much of the groundwork that influences how we organize today was built during this time. Months before any union or campus-wide labor action, members of the Astronomy and Astrophysics department organized around publishing one of two letters from our university (alongside the Physics department) pledging to refuse labor which supported the ongoing genocide in Palestine in response to a call from the PGFTUPalestine General Federation of Trade Unions (PGFTU)  to end complicity with the violence.The letter was published in Science for the People in January 2024. Many of the demands workshopped in writing this letter, such as funding transparency and transitional support funding, were eventually adopted as demands in our statewide strike (in part due to the presence of UCSC astronomers participating in the statewide organizing).</p><p id="29a3ae34-af4d-8021-97a3-e572945f3594" class="">As the strike developed, conversations centered around the letter prepared us in advance for what would have otherwise been an extremely rushed and constraining strike timeline. People had already developed their position (with some tuning out entirely; a reflection point for future actions). For the first time, our department was regularly sending &gt;5 people to campuswide planning meetings, and roughly 20 people were heavily involved in our strategizing as a department. Members of the department committed to regular meetings and check-ins throughout, and acted with much more strategic intent than in previous strikes (see Lessons for details).</p><p id="29a3ae34-af4d-80e7-901b-cbdbf799dded" class=""><strong>Faculty Response: </strong>Interactions with faculty concerning the ongoing genocide began at scale as we solicited their signatures on the noncomplicity letter. A key strategic shift here was having targeted 1-on-1 discussions with the faculty to encourage them to seriously and critically read and acknowledge the letter, voice their concerns and thoughts, and hopefully get involved themselves. Ultimately, two faculty members anonymously signed the letter, with several more having fruitful conversations.</p><p id="29a3ae34-af4d-806f-bcb9-d78f01e6d1d6" class="">Fostering this level of individual awareness among the faculty was helpful as the movement evolved into the strikes. Although many faculty did not support the premise of our strike, we ultimately did not face retaliation from them despite being fed hostile information from the university. Regular communications between graduate students and faculty were kept throughout the strike, though tensions rose with escalations at the encampment that the faculty saw as “rule-breaking”. In general, faculty mostly expressed desire to support their students despite letting themselves be bound by rules such as timesheet reporting. A key point to reflect on for the future was the tendency for faculty to pick up struck labor such as withheld grading in order to minimize disruption, without understanding that this undermines our actions.</p><p id="29a3ae34-af4d-8091-826e-c5d143c7206c" class=""><strong>Consequences and Lessons: </strong>The 2024 ULP strike is the most impactful event on how our department functionally organizes today, and we take from it countless lessons at the department, university, and statewide level.</p><p id="29a3ae34-af4d-803c-a120-e689f15cd12f" class=""><strong>Organizing Meetings and organizing in non-strike times: </strong>Perhaps the most singularly impactful change in our department’s organizing strategy for this strike is that for the first time (and ever since), our organizing dialogue did not begin or end with a strike. In the process of writing the complicity rejection letter, members of our department began holding standing “organizing” meetings. These meetings persisted as strategy meetings for the lead-up to the strike, and have occurred regularly ever since.</p><p id="29a3ae34-af4d-80f7-8212-d6035dceaf9c" class="">Meeting regularly with each other with the goal of has greatly expanded our horizons of what changes needed to be made in the department, and has kept and distributed organizing knowledge throughout members of the department. Examples of organizing projects that have sprung up since the beginning of the meetings are (1) astro letters, (2) discretionary statements, (3) the mechanics of funding transparency, (3) cross-level department bargaining meetings, (4) several parts of the unfire Zach campaign, (5) this department disorientation guide, and more!</p><p id="29a3ae34-af4d-8087-8f07-eae7626f9d47" class="">Furthermore, the standing organizing meetings (and culture) of the department ensure that we are logistically and strategically prepared to respond to larger university and statewide actions. We experienced firsthand how having organizational infrastructure in place <em>before</em> a strike helped us make strategic and collective decisions even on rapid timescales. Rather than having to rebuild this infrastructure before each strike, we are now able to improve it over time and position ourselves.</p><p id="29a3ae34-af4d-80ff-9299-cc84c2b3fe40" class=""><strong>Strike Prep: </strong>Examples of strike preparation are turnout for preparation meetings, power mapping, general outreach and check-ins. At first, people were hesitant to engage in this strike due to its political nature, but because our organizing infrastructure was in place from working on the letter, we were able to do dedicated turnout for strike meetings and bring people into the loop.</p><p id="29a3ae34-af4d-80b4-9293-d0229c2da161" class="">Another key element of strike preparation in this action was our collectively developed guidelines of what specific tasks were to be struck. As a GSR-majority department, it is often unclear which of our tasks are work, and which are solely academic or degree-progressing. By having concrete guidelines in place, people withhold labor with more confidence and security, and we minimize the amount of scabbing due to ambiguity. A potential future strategy that arose from this was counter-programming during department events (e.g. a history of Palestine colloquium during the regular scheduled slot instead of a science-focused one).</p><p id="29a3ae34-af4d-800d-9dbd-f64c49f7fe0a" class=""><strong>Power Mapping: </strong>Power mapping is a method of identifying all the individuals within our realm of influence (typically within our department), and their particular points of leverage in whatever relevant organizing projects. This took the form of listing every member of the department out in a spreadsheet with information such as their connections to other UC astronomy departments to help with intercampus outreach, what type of appointment each person was in (i.e. GSR vs fellowship vs TA), and what classes people were TAing and the exact number of grades they would be able to withhold.</p><p id="29a3ae34-af4d-808c-a5bb-c93fc1e32570" class="">This was the first strike during which we were diligent in power mapping, and it revealed several strategic strengths and weaknesses. First, the simple act of centralizing this information made outreach and planning much easier. An example of a weakness was that although we had a substantial fraction of individual TAs on strike, the majority of the grades were either under control of a faculty instructor, or graduate students who were not striking. Strategically filling TA positions around strike times is an additional means of leverage that was revealed through power mapping.</p><p id="29a3ae34-af4d-80b3-92bf-d72e26b2f05a" class=""><strong>Initiating conversations and projects: </strong>Leading up to what was ultimately a divisive strike, we learned several lessons on how to effectively bring up workplace discussions to individuals in our department. At first, we attempted to initiate open-ended discussion at an all-grads (not organizing) meeting, which was met with total silence. People were generally hesitant to discuss sensitive topics without guiding structures in place in such a public forum. Instead, we found it much more effective to (1) have smaller, more dedicated meetings to prepare involved individuals to guide these conversations, and (2) have 1-on-1 meetings with people where they were more willing to be vulnerable and digest the conversation. In general, we have found that organizing ideas need to already have traction and a plan going forward before they are brought in front of a broader audience.</p><p id="29a3ae34-af4d-80ae-a9a8-d453acce4e5d" class=""><strong>3 strikes, no one in (department) trouble: </strong>Through the last 3 strikes detailed above, no student (to our knowledge) has faced lasting retaliatory punishment from a member of the department for engaging in labor actions. This was especially notable in the 2024 ULP strike as several faculty were uncomfortable (or disagreed) with the premise of the strike and challenged its legality. Through these repeated labor efforts, faculty have grown to understand that (1) union-sanctioned strikes are legally supported, (2) the workers of the department are serious about organizing towards a better workplace, and (3) no individuals can be retaliated against without provoking a collective response from both union support and fellow members of the department. Point 3 is particularly notable, as other departments in our own division have prominent cultures of retaliation and silencing such that students are aware of mistreatment of their colleagues, but are too fearful to take action. Our support for one another as a collective, and the acknowledgment of the faculty that we will act accordingly is of our greatest strategic tools.</p><p id="29a3ae34-af4d-80c2-86b8-cf27217bc73b" class="">Unfortunately in this most recent strike, the university (finally) figured out how to use our leave reporting forms as adhoc strike attestation, and docked pay from striking workers for the first time. This system as strike attestation is severely flawed -- several workers who were not on strike were docked pay and faculty are given inconsistent messaging on whether it is their responsibility to submit them in lieu of striking students (and it’s a lot of work for them). We somewhat effectively communicated to the faculty to not submit these forms noting our absences in our stead, but countermessaging from the university meant that this was not always successful. Working around attestation through leave reporting forms will be a key point in future actions.</p><p id="29a3ae34-af4d-8046-b195-c9748c7a6d83" class=""><strong>Strategizing communications with faculty: </strong>Following road closures (which faculty are extremely against because it is illegal) by the student-led encampment, UCSC called in XXX separate police departments to initiate a raid on and mass arrest of the encampment protestors in the middle of the night.</p><p id="29a3ae34-af4d-80f5-931d-f6baedfe6da3" class="">The following morning, we wrote an email to the faculty detailing the events of the previous night, and decided to clarify that the encampment and the UAW 4811 strike were distinct actions in solidarity, and that the strikers had not taken any illegal actions. We had hoped that in making this distinction, faculty who were supportive during the strike would not be scared off by a perceived illegality.</p><p id="29a3ae34-af4d-80f0-a70e-e823b7e436a4" class="">Shortly thereafter, two graduate students attended a faculty meeting to check in with the faculty regarding the issue. We encountered a mix of faculty opinion in this meeting, ranging from sincere concern over the students who were arrested, to others aggressively asserting that UAW 4811 strikers were responsible for the encampment and road closures. We found that faculty members felt very vindicated in their own perspective of how labor actions operate (which are often influenced by oppositional messaging from university administration), and debating them in the venue that we had was ineffective. Ultimately, distinguishing ourselves from the encampment actions did not garner any concrete wins of support, and only served to portray our movements as fractured and disorganized. A key future strategy point will be to reflect on when it is worth it to “barter” with faculty for their support, and when it is advantageous to be unabashed about our positions regardless of their response.</p><p id="29a3ae34-af4d-8019-b149-ed7fcedefdd2" class=""><strong>The more stewards the better: </strong>This is simple when stated out loud, but having more people deeply involved in organizing distributes the workload, and broadens the horizons of what are attainable wins. Prior to this strike, organizing in the department took a relatively passive model of ~1 or 2 stewards reporting back from union MMMs (rather than actively participating in and driving), and a handful of students spearheading individual non-union projects that they were passionate about without the support of a larger group.</p><p id="29a3ae34-af4d-806a-a996-f33c023aa0c2" class="">Instead, we now have a group of 15+ members of the department who are in-tune with union efforts, as well as collaborate on organizing projects that extend beyond just what is happening in the union. Beyond making “administrative” tasks like phonebanking and</p><p id="29a3ae34-af4d-8016-99a5-f1f9eff3d956" class=""><strong><a href="Time,%20Place,%20Manner%20(TPM)%20Policy%202763ae34af4d804a9de4ca9956959a92.html">See Time, Place, and Manner</a></strong></p></div></div><hr id="29a3ae34-af4d-803a-ad21-e85c61e5837f"/><div id="29a3ae34-af4d-80b6-a134-c5099e78a597" class="column-list"><div id="29a3ae34-af4d-80da-b675-d89344e4d8c3" style="width:50%" class="column"><h1 id="29a3ae34-af4d-80ee-8d36-f3027740c8b2" class="">The UC Budget</h1><p id="29a3ae34-af4d-80ac-8edb-d41106d8e93e" class="">
+</p><p id="29a3ae34-af4d-8048-93ce-e4deb00bf4ab" class="">Universities, including our own, have evolved over time to become investment firms with half-hearted educational and research side hustles. This is part of a larger current of university financialization, adopting a model of wealth accumulation as a primary function, and relying on the accrual of interest from this wealth to reproduce the institution.</p><p id="29a3ae34-af4d-806a-ae93-d9e38cf59bc8" class="">The University of California is a multi-billion dollar institution, and the majority of its wealth is in the form of investments. The UC’s total operating budget, which you can think of as the liquid assets being used to run the university, totals <a href="https://lao.ca.gov/Publications/Report/4862">$51.4B</a>; the UC’s investment portfolio was <a href="https://www.universityofcalifornia.edu/press-room/stocks-and-real-estate-power-ucs-investments-180-billion-fiscal-year-end">$180 billion</a> as of August 1st 2024 (a $16 billion increase from the previous fiscal year).</p><p id="29a3ae34-af4d-80c0-ac10-cd667d36bc76" class="">By definition, this is money that does not contribute to the function of the university. It does not pay instructor or TA salaries when campuses “can’t afford” to offer reasonable class sizes; it does not pay for research activities when federal funding gets cut. Why should UC accumulate endless wealth when our students, workers, and research initiatives suffer?</p><p id="29a3ae34-af4d-8041-aa36-c9b84b469708" class="">To add insult to injury, UC complains that we are in the middle of a “budget crisis,” advertising a $100M budget shortfall at UCSC alone. UC has passed the bill onto workers, tightening research support and diligently scraping back every spare dollar from our already strapped departments. At the same time, the <a href="https://www.ucop.edu/investment-office/annual-report-240923_ucar24_final.pdf">2024 UC Investments Report</a> brags that their total investment assets are “on our way to $500B.”</p><p id="29a3ae34-af4d-8055-baf4-f48339dd8abb" class="">One demand we have organized around is for UC to <a href="https://payusmoreucsc.com/build-a-bridge-to-a-better-budget/">liquidate the Blue and Gold Pool.</a> The university’s investment portfolio is organized into a number of different investment pools, which have different earmarks and investment strategies. However, the B&amp;G is intended to be a highly liquid emergency fund for the university to tap into in moments of crisis. In fact, during the beginning of the Covid pandemic, UC drained this pool from $2B to $0 to flush campuses with emergency funding and prevent operational collapse. Now, this fund stands at $6.9B. What could we do with $6.9B?</p><ul id="29a3ae34-af4d-804c-b697-da3409a8416e" class="bulleted-list"><li style="list-style-type:disc">Eliminate the UC’s $500M budget deficit 14 times over</li></ul><ul id="29a3ae34-af4d-8008-884c-f86a72c333bf" class="bulleted-list"><li style="list-style-type:disc">Hire 39,000 faculty members or 54,000 lecturers</li></ul><ul id="29a3ae34-af4d-80c0-ace7-c9ec4bdb2bdc" class="bulleted-list"><li style="list-style-type:disc">Provide full summer funding for 295,000 grad workers</li></ul><ul id="29a3ae34-af4d-80c2-b09c-e3658f87d3bb" class="bulleted-list"><li style="list-style-type:disc">Hire 133,000 custodians or 108,000 bus drivers at full time</li></ul><ul id="29a3ae34-af4d-80fc-8f16-fc2583017fab" class="bulleted-list"><li style="list-style-type:disc">Cover all annual NSF and HHS funding across every UC campus — twice over</li></ul><p id="29a3ae34-af4d-802a-b8df-d6902dd0b3b9" class="">
+</p></div><div id="29a3ae34-af4d-803f-acb5-fa9889b1bc8c" style="width:50%" class="column"><h1 id="29a3ae34-af4d-8029-828c-fb83ea27303b" class="">BDS</h1><p id="29a3ae34-af4d-8087-adbe-dc83d608fc8f" class="">In 2005, a call from over 170 Palestinian unions and other civil society organizations established the Boycott, Divestment, and Sanctions (BDS) global campaign, a non-violent, economic strategy to influence Israel to withdraw from its ongoing occupation of Palestine [<a href="https://www.bdsmovement.net/">BDS movement</a>]. This movement escalated globally in October 2023. The BDS movement is an attack on the occupation born from the constraints of nascent international support. In 2005, the international solidarity movement for Palestine had not built sufficient coherence, power, or leverage to truly consider coordinated, large-scale interventions by organized labor or activist groups. A more feasible – and brilliant – strategy was to establish a boycott “picket line” that both individuals and organized groups were called to honor, building power from a modest starting point to economically starve the occupation. It’s clearly working – here’s a quote from the BDS campaign website:</p><p id="29a3ae34-af4d-8010-80d7-f3e2664c2371" class=""><em>Affirming the role the BDS movement has</em><em><a href="https://bdsmovement.net/ShutDownNation-Global-Divestment-Economic-Strain-Accelerating-Collapse-Of-Israels-Economy"> played</a></em><em> in the Israeli economy’s “</em><em><a href="https://bdsmovement.net/ShutDownNation-130-Top-Israeli-Economists-Israels-Spiral-of-Collapse">spiral of collapse</a></em><em>,” as 130 leading Israeli economists describe it, in September, the Chairman of the Israeli Export Institute</em><em><a href="https://www.bdsmovement.net/ShutDownNation-Global-Divestment-Economic-Strain-Accelerating-Collapse-Of-Israels-Economy"> said</a></em><em>: “BDS and boycotts have changed Israel’s global trade landscape.” He added, “Economic boycotts and BDS organizations present major challenges, and in some countries, we are forced to operate under the radar.” Israel’s projected annual GDP</em><em><a href="https://archive.fo/tiYHy#selection-1715.0-1719.229%C2%A0"> growth rate for 2024 is 0%</a></em><em>, according to leading credit rating agency S&amp;P, and some 60,000 Israeli businesses are projected to have shut down during this year of ongoing genocide.</em></p><p id="29a3ae34-af4d-80d5-a36b-d5f0617bd316" class="">This movement entered a very different context in October 2023, when Israel’s genocide in Gaza began. The Palestinian General Federation of Trade Unions once again called for intervention into the occupation, but this call built upon the stronger foundation of organized international solidarity: in addition to intensifying commitment to the BDS campaign, PGFTU called on international labor unions to stop military trade and investments in weapons manufacturing destined for Israel [<a href="https://www.workersinpalestine.org/the-calls-languages/english">citation</a>]. It’s important to note that since its start, BDS has been inspired by strategies to combat South African apartheid, including boycotts against Barclays and Shell [citation]. These economic tactics were key contributors to the end of the apartheid state in 1994, a state which is now, only after-the-fact, globally condemned.</p><p id="29a3ae34-af4d-8090-bd1a-f3fff5095caa" class="">Since the direct call from Palestinian trade unions, both UAW 4811 and local UCSC astro grads have been fighting for divestment. In early organizing efforts, Researchers Against War was established, a coalition of anti-war workers across several campuses that organize locally to reject Department of Defense (DoD) funding [<a href="https://longhaulmag.com/uc-strike-for-palestine/">citation</a>]. Subsequently, the May 2024 ULP strike [see Section: Strike history + astro involvement] [see Subsection: Astro 4 Palestine letter + relationship between astronomy and the military] saw these four key demands centered around the BDS movement:</p><ol type="1" id="29a3ae34-af4d-80c7-bf00-e7a1e2fd0cab" class="numbered-list" start="1"><li><strong>Amnesty.</strong> Students and workers participating in the UCSC Gaza Solidarity Encampment were suspended, expelled, and/or violently arrested for peaceful protest. Charges against all students and workers must be dropped.</li></ol><ol type="1" id="29a3ae34-af4d-8071-ba16-d734e69f326c" class="numbered-list" start="2"><li><strong>Divestment.</strong> Divestment is not a hefty ask. The UC has a whopping $180 <em>billion</em> endowment [<a href="https://www.universityofcalifornia.edu/press-room/stocks-and-real-estate-power-ucs-investments-180-billion-fiscal-year-end">citation</a>], with $5.9 million directly invested in beneficiaries of the Israeli occupation [<a href="https://www.whoprofits.org/">Who Profits</a>] and $3.5 <em>billion</em> indirectly invested in military contractors (Lockheed Martin, Northrop Grumman, etc) via index funds. The direct investments are little to nothing to the UC, which has settled more off of grievances. Indirect investments can be restructured into a custom fund with language that avoids complicitly with the genocide in Palestine; the UC did this exact restructuring to divest its retirement funds from fossil fuels in 2022 [<a href="https://myucretirement.com/resources/articles/0016">citation</a>].</li></ol><ol type="1" id="29a3ae34-af4d-8072-89fa-ea83453815c7" class="numbered-list" start="3"><li><strong>Disclosure.</strong> Direct and indirect investments of university funds in Israel are not explicitly disclosed. Workers deserve explicit funding transparency from their workplace.</li></ol><ol type="1" id="29a3ae34-af4d-80c3-9b79-c62069680475" class="numbered-list" start="4"><li><strong>Transitional funding.</strong> This is useful both for workers who wish to detach their labor for the DoD, and, more generally, for any worker experiencing harassment, abuse, etc in the workplace and needs funding for relocation to a different PI.</li></ol><p id="29a3ae34-af4d-8008-9b3f-cb94dd3a6f3e" class="">The union is currently bargaining with the university for our upcoming contract, with demands including 1 year of transitional funding and divesting Academic Student Employee retirement contributions from weapons manufacturing.</p><p id="29a3ae34-af4d-80ea-9dd4-dbf28e7128b8" class="">Previous divestment campaigns at UC have proven to be incredibly effective. In 1986, after <em>20 years</em> of unrelenting advocacy that the US divest from South African apartheid, UC finally divested its $3 billion holdings in corporations working with the apartheid regime. This fact is now celebrated by the UC Berkeley administration [<a href="https://www.lib.berkeley.edu/visit/bancroft/oral-history-center/projects/managing-protest">citation</a>]. Similarly, in 2006 UC divested from its tens of millions of holdings with companies complicit in the Darfur genocide in Sudan [<a href="https://payusmoreucsc.com/2024-daily-sheets/">citation</a>]. These campaigns often continue for years and years before demands are met. And when those demands are met, it is by the power of the collective of workers. For example, in the wake of our 2024 ULP strike, UC’s direct investments in weapons manufacturers and beneficiaries of the occupation quietly disappeared from their financial filings, which would not have happened if workers had not organized and walked off the job to win this. The fight continues, and we can win more.</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
